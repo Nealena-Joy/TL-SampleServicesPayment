@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../../App.css';
 import {Form, Button} from 'react-bootstrap';
 import APIURL from '../helpers/environment';
-import { json } from 'react-router-dom';
+
 
 export default class Login extends Component {
     constructor(props) {
@@ -43,7 +43,7 @@ export default class Login extends Component {
             localStorage.setItem('LAST_NAME', LAST_NAME);
             localStorage.setItem('USERNAME', USERNAME);
             localStorage.setItem('ID', ID);
-            window.location.href = `http://localhost:3000/dashboard`;
+            window.location.href = `/home`;
    
         })
         .catch((error) => {

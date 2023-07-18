@@ -29,7 +29,7 @@ export default function App() {
                     <Header />
                     <Routes style={{padding:"0"}}>
                         <Route path="/home" element={<Dashboard />} />
-                        <Route path="/dashboard" element={<PlayerList />} />
+                        <Route path="/rankings" element={<PlayerList />} />
                         <Route path="/match-records" element={<MatchRecords />} />
                         <Route path="/more" element={<MatchCreation />} />
                     </Routes>

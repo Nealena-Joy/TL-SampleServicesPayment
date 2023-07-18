@@ -19,7 +19,7 @@ export default class Dashboard extends React.Component {
         return (
             <Container>
                 <Container className="d-grid gap-2">
-                    <Button size="lg" style={{textAlign:'left'}}>
+                    <Button href='/rankings' size="lg" style={{textAlign:'left'}}>
                         <img 
                             alt=""
                             src={Icon_Rank}
@@ -30,7 +30,7 @@ export default class Dashboard extends React.Component {
                     </Button>
                 </Container>
                 <Container className="d-grid gap-2">
-                    <Button size="lg" style={{textAlign:'left'}}>
+                    <Button href='/match-records' size="lg" style={{textAlign:'left'}}>
                         <img 
                             alt=""
                             src={Icon_Racket}
@@ -41,7 +41,7 @@ export default class Dashboard extends React.Component {
                     </Button>
                 </Container>
                 <Container className="d-grid gap-2">
-                    <Button size="lg" style={{textAlign:'left'}}>
+                    <Button href='/more' size="lg" style={{textAlign:'left'}}>
                         <img 
                             alt=""
                             src={Icon_Add}
@@ -52,7 +52,7 @@ export default class Dashboard extends React.Component {
                     </Button>
                 </Container>
                 <Container className="d-grid gap-2">
-                    <Button size="lg" style={{textAlign:'left'}}>
+                    <Button href='/match-records' size="lg" style={{textAlign:'left'}}>
                         <img 
                             alt=""
                             src={Icon_Profile}

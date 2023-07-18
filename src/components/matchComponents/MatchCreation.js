@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../App.css';
 import { Container, Form, Button, Col, Row, Card, ButtonGroup } from 'react-bootstrap';
+import APIURL from '../helpers/environment';
+
 
 export default class MatchCreation extends React.Component {
     constructor(props) {
@@ -25,7 +27,7 @@ export default class MatchCreation extends React.Component {
         console.log("Match Form Input: ", this.state.MATCH_DATE);
         e.preventDefault();
 
-        fetch(`http://localhost:8000/match/new`, {            
+        fetch(`${APIURL}/match/new`, {            
             method: 'POST', 
             body: JSON.stringify({match_record: {
                 PLAYER1: this.state.PLAYER1,

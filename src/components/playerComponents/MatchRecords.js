@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table, Container, Row, ButtonGroup, ToggleButton, Tabs, Tab, ToggleButtonGroup, Button, Card, Col } from 'react-bootstrap';
 import '../../App.css';
+import APIURL from '../helpers/environment';
 
 
 export default class MatchRecords extends React.Component {
@@ -15,7 +16,7 @@ export default class MatchRecords extends React.Component {
     //!  Get Match Records
     fetchMatchRecords() {
         console.log("Level Value: ", this.state.filterLevel)
-        fetch(`http://localhost:8000/match/records/all`, {            
+        fetch(`${APIURL}/match/records/all`, {            
             method: 'GET', 
             headers: new Headers({
                 'Content-Type': 'application/json'

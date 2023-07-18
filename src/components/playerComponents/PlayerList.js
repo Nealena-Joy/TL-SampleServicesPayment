@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table, Container, Button, Form, ButtonGroup, ToggleButton, Row} from 'react-bootstrap';
 import '../../App.css';
+import APIURL from '../helpers/environment';
 
 
 export default class PlayerList extends React.Component {
@@ -21,7 +22,7 @@ export default class PlayerList extends React.Component {
     //!  Get Player List By Level
     fetchPlayersByLevel() {
         console.log("Level Value: ", this.state.filterLevel)
-        fetch(`http://localhost:8000/player/view/${this.state.filterLevel}`, {            
+        fetch(`${APIURL}/player/view/${this.state.filterLevel}`, {            
             method: 'GET', 
             headers: new Headers({
                 'Content-Type': 'application/json'
