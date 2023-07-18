@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.LoginBTN {
+  justify-self: right;
+}
+
+.Menu {
+  display: flex;
+  justify-content: center;
+}
+
+.Ranking-Row {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
