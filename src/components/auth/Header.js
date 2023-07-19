@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../../App.css';
 import {Navbar, Nav} from 'react-bootstrap';
 import TennisBall from '../assets/tennis.png';
-import APIURL from '../helpers/environment';
 
 
 export default class Header extends Component {
@@ -22,7 +21,7 @@ export default class Header extends Component {
         localStorage.clear();
         //  Set isLoggedIn as FALSE
         this.setState({isLoggedIn: false});
-        window.location.href = `${APIURL}`;
+        window.location.href = '';
     }
 
     render() {

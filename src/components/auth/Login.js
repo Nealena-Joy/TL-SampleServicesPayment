@@ -44,6 +44,7 @@ export default class Login extends Component {
             localStorage.setItem('USERNAME', USERNAME);
             localStorage.setItem('ID', ID);
             window.location.href = `/home`;
+            console.log("URL: ", APIURL);
    
         })
         .catch((error) => {

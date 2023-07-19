@@ -4,7 +4,10 @@ switch (window.location.hostname) {
     case 'localhost' || '127.0.0.1':
         APIURL = 'http://localhost:8000';
         break;
-    case 'https://ast2023.onrender.com':               // Client URL
-        APIURL = 'https://ast-server.onrender.com'     // Server URL
+    case 'ast2023.onrender.com':              
+        APIURL = 'https://ast-server.onrender.com';
+        break;
+    default:
+        break;
 }
 export default APIURL;

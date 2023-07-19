@@ -5,10 +5,10 @@ import Login from './components/auth/Login';
 import Menu from './components/auth/Menu';
 import PlayerList from './components/playerComponents/PlayerList';
 import MatchRecords from './components/playerComponents/MatchRecords';
-import { Container, Row } from 'react-bootstrap';
 import Header from './components/auth/Header';
 import MatchCreation from './components/matchComponents/MatchCreation';
 import Dashboard from './components/auth/Dashboard';
+import PointCalculation from './components/matchComponents/PointCalculation';
 
 export default function App() {
 
@@ -31,6 +31,7 @@ export default function App() {
                         <Route path="/home" element={<Dashboard />} />
                         <Route path="/rankings" element={<PlayerList />} />
                         <Route path="/match-records" element={<MatchRecords />} />
+                        <Route path="/profiles" element={<PointCalculation />} />
                         <Route path="/more" element={<MatchCreation />} />
                     </Routes>
                     <Menu />

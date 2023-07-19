@@ -5,8 +5,6 @@ import Icon_Rank from '../assets/star.svg';
 import Icon_Match from '../assets/racket.svg';
 import Icon_Add from '../assets/add2.svg';
 import Icon_Profile from '../assets/profile.svg';
-import { Link } from 'react-router-dom';
-
 
 
 export default class Menu extends React.Component {
@@ -15,7 +13,7 @@ export default class Menu extends React.Component {
         return(
             <Container>
             <Navbar className="justify-content-center" fixed="bottom" bg="dark" data-bs-theme="dark">
-                <Navbar.Brand href="/dashboard" style={{fontSize:'12px',alignItems:'center'}}>
+                <Navbar.Brand href="/rankings" style={{fontSize:'12px',alignItems:'center'}}>
                     <Container>
                         <img 
                             alt=""
@@ -41,7 +39,7 @@ export default class Menu extends React.Component {
                     </Container>
                     
                 </Navbar.Brand>
-                <Navbar.Brand href="/match-records" style={{fontSize:'12px',justifyContent:'center'}}>
+                <Navbar.Brand href="/profiles" style={{fontSize:'12px',justifyContent:'center'}}>
                     <Container>
                         <img
                             alt=""

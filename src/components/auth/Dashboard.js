@@ -4,7 +4,7 @@ import Icon_Rank from '../assets/star.svg';
 import Icon_Racket from '../assets/racket.svg';
 import Icon_Add from '../assets/add2.svg';
 import Icon_Profile from '../assets/profile.svg';
-import { Button, Container, Col, Row, Card } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 
 export default class Dashboard extends React.Component {
     constructor(props) {
@@ -52,7 +52,7 @@ export default class Dashboard extends React.Component {
                     </Button>
                 </Container>
                 <Container className="d-grid gap-2">
-                    <Button href='/match-records' size="lg" style={{textAlign:'left'}}>
+                    <Button href='/profiles' size="lg" style={{textAlign:'left'}}>
                         <img 
                             alt=""
                             src={Icon_Profile}
