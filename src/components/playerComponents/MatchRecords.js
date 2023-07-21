@@ -39,7 +39,7 @@ export default class MatchRecords extends React.Component {
             <Container fluid className='container' style={{overflowY:'auto'}}>
                 <Container className='container' style={{paddingBottom:'5px'}}>
                     <Row>
-                        <Button size='sm'>MATCH RESULTS</Button>
+                        <Button size='sm' variant="success">MATCH RESULTS</Button>
                     </Row>
                 </Container>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Container, Button, ButtonGroup, Row} from 'react-bootstrap';
+import { Table, Container, Button, ButtonGroup, Row, Form } from 'react-bootstrap';
 import '../../App.css';
 import APIURL from '../helpers/environment';
 
@@ -53,13 +53,15 @@ export default class PlayerList extends React.Component {
             <Container Container fluid className='container' style={{overflowY:'auto'}}>
                 <Container className='container' style={{paddingBottom:'5px'}}>
                     <Row>
-                        <ButtonGroup size='sm'>
-                            <Button variant="outline-secondary" onClick={(e)=>this.setState({filterLevel: 'Red'})} >Red</Button>
-                            <Button variant="outline-secondary" onClick={(e)=>this.setState({filterLevel: 'Orange'})} value='Orange'>Orange</Button>
-                            <Button variant="outline-secondary" onClick={(e)=>this.setState({filterLevel: 'Green'})} value='Green'>Green</Button>
-                        </ButtonGroup> 
+                        <Button size='sm' variant="success">MATCH PLAY RANKINGS</Button>
                     </Row>
                 </Container>
+
+                <Form.Select size="sm" onChange={(e)=>this.setState({filterLevel: e.target.value})}>
+                    <option value="Red">Red Ball Stage</option>
+                    <option value="Orange">Orange Ball Stage</option>
+                    <option value="Green">Green Ball Stage</option>
+                </Form.Select>
                 
                 <Container>
                     <Row>

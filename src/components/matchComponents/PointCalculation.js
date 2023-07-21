@@ -8,7 +8,7 @@ export default class PointCalculation extends React.Component {
 
     render() {
         return(
-            <Container>UNDER CONTSTUCTION</Container>
+            <Container>UNDER CONSTRUCTION</Container>
         )
     }
 

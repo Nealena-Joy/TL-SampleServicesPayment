@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../App.css';
 import {Navbar, Nav} from 'react-bootstrap';
-import TennisBall from '../assets/tennis.png';
+import AST from '../assets/AST_no_background.png';
 
 
 export default class Header extends Component {
@@ -26,17 +26,15 @@ export default class Header extends Component {
 
     render() {
         return(
-            <Navbar bg="dark" data-bs-theme="dark" fixed="top" sticky="top">
+            <Navbar bg="success" data-bs-theme="dark" fixed="top" sticky="top">
                 <Nav>
                     <Navbar.Brand href='/home' style={{paddingLeft:'10px'}}>
                         <img
                             alt=""
-                            src={TennisBall}
-                            width="30"
-                            height="30"
+                            src={AST}
+                            height="25"
                             className="d-inline-block align-top"
-                            />{' '}
-                            AST
+                            />
                     </Navbar.Brand>
                 </Nav>
                 <Navbar.Collapse className="justify-content-end">
