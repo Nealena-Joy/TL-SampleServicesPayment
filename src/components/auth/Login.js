@@ -78,11 +78,11 @@ export default class Login extends Component {
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Group className="mb-3" controlId="" align="left">
                             <Form.Label>Email Address</Form.Label>
-                            <Form.Control name="USERNAME" type="email" placeholder="name@example.com" onChange={(e)=>this.setState({USERNAME: e.target.value})}/>       
+                            <Form.Control required name="USERNAME" type="email" placeholder="name@example.com" onChange={(e)=>this.setState({USERNAME: e.target.value})}/>       
                         </Form.Group>
                             <Form.Group className="mb-3" controlId="" align="left" >
                             <Form.Label>Password</Form.Label>
-                            <Form.Control name="PASSWORD" type="password" rows={3} onChange={(e)=>this.setState({PASSWORD: e.target.value})}/>   
+                            <Form.Control required name="PASSWORD" type="password" rows={3} onChange={(e)=>this.setState({PASSWORD: e.target.value})}/>   
                         </Form.Group>
                         <Container style={{display:'flex',justifyContent:'center'}}>
                             <Button variant="success" type='submit' style={{borderRadius:"50px",width:'50%'}}>LOG IN</Button>
