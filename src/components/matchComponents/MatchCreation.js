@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Form, Button, Col, Row, ButtonGroup } from 'react-bootstrap';
 import APIURL from '../helpers/environment';
 
@@ -17,8 +18,8 @@ export default class MatchCreation extends React.Component {
             ],
             MATCH_DATE: '',
             LEVEL: '',
-            CREATED_BY: 'Admin',
-            MODIFIED_BY: 'Admin'
+            CREATED_BY: localStorage.getItem('USERNAME'),
+            MODIFIED_BY: localStorage.getItem('USERNAME')
         }
         
     }
@@ -137,6 +138,7 @@ export default class MatchCreation extends React.Component {
     //!  Create Match Records
     handleSubmit(e) {
         e.preventDefault();
+        
 
         // Iterates through array of matches
         // Filtered so that if player name is null, it will not persist
@@ -203,29 +205,29 @@ export default class MatchCreation extends React.Component {
                     {this.state.allMatchScores.map((matchScore, i) => (
                         <Container key={i}>
                             <Row>Match #{i+1}</Row>
-                            <Row className="square border border-1">
+                            <Row>
                                 <Col xs={8}>
-                                    <Row className="square border border-1">
+                                    <Row>
                                         <Form.Control size="sm" required placeholder="Player 1" name='PLAYER1'
                                         onChange={e=>this.handleInputChange(e,i)} />
                                     </Row>
-                                    <Row className="square border border-1">
+                                    <Row>
                                         <Form.Control size="sm" required placeholder="Player 2" name='PLAYER2'
                                         onChange={e=>this.handleInputChange(e,i)} />
                                     </Row>
                                 </Col>
 
                                 <Col xs={1}>
-                                    <Row className="square border border-1">
+                                    <Row>
                                         <ButtonGroup size="sm">
-                                            <Button name="decreaseScore" onClick={e=>this.decreaseScoreP1(e,i)}>-</Button>
+                                            <Button onClick={e=>this.decreaseScoreP1(e,i)}>-</Button>
                                             <Button>
                                                 {this.state.allMatchScores[i].PLAYER1_SCORE}
                                             </Button>
                                             <Button onClick={e=>this.increaseScoreP1(e,i)}>+</Button>
                                         </ButtonGroup>
                                     </Row>
-                                    <Row className="square border border-1">
+                                    <Row>
                                         <ButtonGroup size="sm">
                                             <Button onClick={e=>this.decreaseScoreP2(e,i)}>-</Button>
                                             <Button>

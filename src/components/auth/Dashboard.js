@@ -16,8 +16,13 @@ export default class Dashboard extends React.Component {
 
 
     render() {
+        const FIRST_NAME=localStorage.getItem('FIRST_NAME');
+        
         return (
-            <Container>
+            <Container style={{padding:'0'}}>
+                <Container style={{backgroundColor:'blue',padding:'10% 0'}}>
+                    Welcome, Coach {FIRST_NAME}!
+                </Container>
                 <Container className="d-grid gap-2">
                     <Button href='/rankings' size="lg" style={{textAlign:'left'}}>
                         <img 

@@ -34,7 +34,7 @@ export default function App() {
                           <Route path="/profiles" element={<PointCalculation />} />
                           <Route path="/more" element={<MatchCreation />} />
                       </Routes>
-                    <Menu />
+                    {/* <Menu /> */}
                 </div>
             )
           } else {
