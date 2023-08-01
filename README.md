@@ -70,40 +70,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # ast-react-2023
 
-
-
-
-
-    
-
-    //!  Create Match Records
-    handleSubmit(e) {
-        console.log("Match Form Input: ", this.state.match_record);
-        e.preventDefault();
-
-        fetch(`${APIURL}/match/new`, {            
-            method: 'POST', 
-            body: JSON.stringify({match_record: {
-                PLAYER1: this.state.PLAYER1,
-                PLAYER2: this.state.PLAYER2,
-                MATCH_WINNER: this.state.PLAYER1,
-                PLAYER1_SCORE: this.state.PLAYER1_SCORE,
-                PLAYER2_SCORE: this.state.PLAYER2_SCORE,
-                MATCH_DATE: this.state.MATCH_DATE,
-                LEVEL: this.state.LEVEL,
-                CREATED_BY: this.state.CREATED_BY,
-                MODIFIED_BY: this.state.MODIFIED_BY
-            }}),
-            headers: new Headers({
-                'Content-Type': 'application/json'
-            })
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            console.log("Match Created: ", response);
-        })
-        .catch((error) => console.log("ERROR! [at fetchMatchRecords]:", error))
-    }
-
-===== TO DO ======
-1 - Calculate Match Winner
+===== UPDATES ======
+1 - Calculate Match Winner - DONE
+2 - If no scores, then should not persist to DB - DONE
