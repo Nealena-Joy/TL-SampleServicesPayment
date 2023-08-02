@@ -39,12 +39,33 @@ export default class MatchCreation extends React.Component {
         //!  Setting Player Name values (based on key & value pair)
         //!  If name equals key and matches PLAYER1 or PLAYER2, then set value
         matchScoreKey.forEach((key, i)=>{
-            if (name===key && name==='PLAYER1') {
-                matchScore.PLAYER1 = value;
-                console.log(`Here: ${matchScore.PLAYER1}`)
-            } else if (name===key && name==='PLAYER2') {
-                matchScore.PLAYER2 = value;
-                console.log(`Here: ${matchScore.PLAYER2}`)
+            // if (name===key && name==='PLAYER1') {
+            //     matchScore.PLAYER1 = value;
+            //     console.log(`Here: ${matchScore.PLAYER1}`)
+            // } else if (name===key && name==='PLAYER2') {
+            //     matchScore.PLAYER2 = value;
+            //     console.log(`Here: ${matchScore.PLAYER2}`)
+            // } else if (name===key && name==='PLAYER1_SCORE') {
+            //     matchScore.PLAYER1_SCORE = value;
+            // } else if (name===key && name==='PLAYER2_SCORE') {
+            //     matchScore.PLAYER2_SCORE = value;
+            // } else {
+            //     console.log("ERROR: At handleInputChange (Player Names)")
+            //     console.log(`ERROR: [name]=${name}, ${matchScore.PLAYER1_SCORE}`)
+            // }
+
+            if (name===key) {
+                if (name==='PLAYER1') {
+                    matchScore.PLAYER1 = value;
+                } else if (name==='PLAYER2') {
+                    matchScore.PLAYER2 = value;
+                } else if (name==='PLAYER1_SCORE') {
+                    let valueInt = parseInt(value);  // Turn string value into int
+                    matchScore.PLAYER1_SCORE = valueInt;
+                } else if (name==='PLAYER2_SCORE') {
+                    let valueInt = parseInt(value);  // Turn string value into int
+                    matchScore.PLAYER2_SCORE = parseInt(valueInt);
+                }
             } else {
                 console.log("ERROR: At handleInputChange (Player Names)")
             }
@@ -220,20 +241,18 @@ export default class MatchCreation extends React.Component {
                                 <Col xs={1}>
                                     <Row>
                                         <ButtonGroup size="sm">
-                                            <Button onClick={e=>this.decreaseScoreP1(e,i)}>-</Button>
-                                            <Button>
-                                                {this.state.allMatchScores[i].PLAYER1_SCORE}
-                                            </Button>
-                                            <Button onClick={e=>this.increaseScoreP1(e,i)}>+</Button>
+                                            <button onClick={e=>this.decreaseScoreP1(e,i)}>-</button>
+                                            <input style={{width:'30px'}} value={this.state.allMatchScores[i].PLAYER1_SCORE} 
+                                                name='PLAYER1_SCORE' onChange={e=>this.handleInputChange(e,i)}/>
+                                            <button onClick={e=>this.increaseScoreP1(e,i)}>+</button>
                                         </ButtonGroup>
                                     </Row>
                                     <Row>
                                         <ButtonGroup size="sm">
-                                            <Button onClick={e=>this.decreaseScoreP2(e,i)}>-</Button>
-                                            <Button>
-                                                {this.state.allMatchScores[i].PLAYER2_SCORE}
-                                            </Button>
-                                            <Button onClick={e=>this.increaseScoreP2(e,i)}>+</Button>
+                                            <button onClick={e=>this.decreaseScoreP2(e,i)}>-</button>
+                                            <input style={{width:'30px'}} value={this.state.allMatchScores[i].PLAYER2_SCORE} 
+                                                name='PLAYER1_SCORE' onChange={e=>this.handleInputChange(e,i)}/>
+                                            <button onClick={e=>this.increaseScoreP2(e,i)}>+</button>
                                         </ButtonGroup>
                                     </Row>
                                 </Col>
