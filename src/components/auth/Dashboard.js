@@ -25,14 +25,14 @@ export default class Dashboard extends React.Component {
                 <div style={{backgroundColor:'blue',padding:'2rem 0'}}>
                     <Container>Welcome, Coach {FIRST_NAME}!</Container>
                 </div>
-                <div>
+                <div style={{paddingBottom:'1rem'}}>
                     <Container>
                         <DashboardLinks />
                     </Container>
                 </div>
-                <div style={{paddingTop:'1rem'}}>
+                <div style={{backgroundColor:'lightgray',paddingBottom:'1rem'}}>
                     <Container>
-                        <div>Latest Matches</div>
+                        <Container style={{paddingLeft:'0'}}>Latest Matches</Container>
                         <LatestMatches />
                     </Container>
                 </div>
