@@ -11,61 +11,41 @@ export default class Menu extends React.Component {
     
     render() {
         return(
-            <Container>
-            <Navbar className="justify-content-center" fixed="bottom" bg="dark" data-bs-theme="dark">
-                <Navbar.Brand href="/rankings" style={{fontSize:'12px',alignItems:'center'}}>
-                    <Container>
+            <Container style={{padding:'0'}}>
+                <Navbar className="justify-content-center" bg="dark" data-bs-theme="dark">
+                    <Navbar.Brand href="/rankings">
                         <img 
-                            alt=""
+                            alt="Rankings"
                             src={Icon_Rank}
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top menu-icon"
+                            width="20"
+                            height="20"
                         />
-                        <p style={{textAlign:"center"}}>Rankings</p>
-                    </Container>
-                    
-                </Navbar.Brand>
-                <Navbar.Brand href="/match-records" style={{fontSize:'12px',justifyContent:'center'}}>
-                    <Container>
+                    </Navbar.Brand>
+                    <Navbar.Brand href="/match/records">
                         <img
-                            alt=""
+                            alt="MatchRecords"
                             src={Icon_Match}
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top menu-icon"
+                            width="20"
+                            height="20"
                         />
-                        <p style={{textAlign:"center"}}>Matches</p>
-                    </Container>
-                    
-                </Navbar.Brand>
-                <Navbar.Brand href="/profiles" style={{fontSize:'12px',justifyContent:'center'}}>
-                    <Container>
+                    </Navbar.Brand>
+                    <Navbar.Brand href="/profiles">
                         <img
-                            alt=""
+                            alt="Profiles"
                             src={Icon_Profile}
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top menu-icon"
+                            width="20"
+                            height="20"
                         />
-                        <p style={{textAlign:"center"}}>Profiles</p>
-                    </Container>
-                    
-                </Navbar.Brand>
-                <Navbar.Brand href="more" style={{fontSize:'12px'}}>
-                    <Container>
+                    </Navbar.Brand>
+                    <Navbar.Brand href="match/add">
                         <img
-                            alt=""
+                            alt="Add"
                             src={Icon_Add}
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top menu-icon"
+                            width="20"
+                            height="20"
                         />
-                        <p style={{textAlign:"center"}}>More</p> 
-                    </Container>
-                    
-                </Navbar.Brand>
-            </Navbar>
+                    </Navbar.Brand>
+                </Navbar>
             </Container>
         )
     };

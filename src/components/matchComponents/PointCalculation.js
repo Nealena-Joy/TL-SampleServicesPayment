@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import { Container } from 'react-bootstrap';
+import BreadcrumbBar from '../auth/BreadcrumbBar.js';
 
 
 export default class PointCalculation extends React.Component {
@@ -8,8 +9,10 @@ export default class PointCalculation extends React.Component {
 
     render() {
         return(
-            <Container>UNDER CONSTRUCTION</Container>
+            <Container style={{padding:'0'}}>
+                <Container style={{padding:'0'}}><BreadcrumbBar /></Container>
+                <p>UNDER CONSTRUCTION (Point Calc)</p>
+            </Container>
         )
     }
-
 }

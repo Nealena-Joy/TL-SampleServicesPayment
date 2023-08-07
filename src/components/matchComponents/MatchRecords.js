@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Row, Button, Col } from 'react-bootstrap';
+import { Container, Row, Button, Col, Breadcrumb } from 'react-bootstrap';
 import '../../App.css';
 import APIURL from '../helpers/environment';
+import BreadcrumbBar from '../auth/BreadcrumbBar.js';
 
 
 export default class MatchRecords extends React.Component {
@@ -36,8 +37,9 @@ export default class MatchRecords extends React.Component {
 
     render() {
         return(
-            <Container fluid className='container' style={{overflowY:'auto'}}>
-                <Container className='container' style={{paddingBottom:'5px'}}>
+            <Container fluid className='container' style={{padding:'0', overflowY:'auto'}}>
+                <Container style={{padding:'0'}}><BreadcrumbBar /></Container>
+                <Container style={{paddingBottom:'5px'}}>
                     <Row>
                         <Button size='sm' variant="success">MATCH RESULTS</Button>
                     </Row>

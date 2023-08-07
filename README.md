@@ -73,3 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ===== UPDATES ======
 1 - Calculate Match Winner - DONE
 2 - If no scores, then should not persist to DB - DONE
+3 - Fix menu padding - DONE

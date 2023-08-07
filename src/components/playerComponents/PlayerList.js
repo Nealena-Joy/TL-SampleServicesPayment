@@ -2,7 +2,8 @@ import React from 'react';
 import { Table, Container, Button, ButtonGroup, Row, Form } from 'react-bootstrap';
 import '../../App.css';
 import APIURL from '../helpers/environment';
-
+import Menu from '../auth/Menu.js';
+import BreadcrumbBar from '../auth/BreadcrumbBar.js';
 
 export default class PlayerList extends React.Component {
     constructor(props) {
@@ -50,7 +51,8 @@ export default class PlayerList extends React.Component {
 
     render() {
         return (
-            <Container Container fluid className='container' style={{overflowY:'auto'}}>
+            <Container Container fluid className='container' style={{padding:'0', overflowY:'auto'}}>
+                <Container style={{padding:'0'}}><BreadcrumbBar /></Container>
                 <Container className='container' style={{paddingBottom:'5px'}}>
                     <Row>
                         <Button size='sm' variant="success">MATCH PLAY RANKINGS</Button>

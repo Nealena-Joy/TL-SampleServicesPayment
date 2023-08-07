@@ -3,6 +3,7 @@ import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Form, Button, Col, Row, ButtonGroup } from 'react-bootstrap';
 import APIURL from '../helpers/environment';
+import BreadcrumbBar from '../auth/BreadcrumbBar';
 
 
 export default class MatchCreation extends React.Component {
@@ -39,21 +40,6 @@ export default class MatchCreation extends React.Component {
         //!  Setting Player Name values (based on key & value pair)
         //!  If name equals key and matches PLAYER1 or PLAYER2, then set value
         matchScoreKey.forEach((key, i)=>{
-            // if (name===key && name==='PLAYER1') {
-            //     matchScore.PLAYER1 = value;
-            //     console.log(`Here: ${matchScore.PLAYER1}`)
-            // } else if (name===key && name==='PLAYER2') {
-            //     matchScore.PLAYER2 = value;
-            //     console.log(`Here: ${matchScore.PLAYER2}`)
-            // } else if (name===key && name==='PLAYER1_SCORE') {
-            //     matchScore.PLAYER1_SCORE = value;
-            // } else if (name===key && name==='PLAYER2_SCORE') {
-            //     matchScore.PLAYER2_SCORE = value;
-            // } else {
-            //     console.log("ERROR: At handleInputChange (Player Names)")
-            //     console.log(`ERROR: [name]=${name}, ${matchScore.PLAYER1_SCORE}`)
-            // }
-
             if (name===key) {
                 if (name==='PLAYER1') {
                     matchScore.PLAYER1 = value;
@@ -197,6 +183,9 @@ export default class MatchCreation extends React.Component {
     render() {
         return(
             <Container fluid className='container' style={{overflowY:'auto'}}>
+                <Container>
+                    <BreadcrumbBar/>
+                </Container>
                 <Container>
                     <Row>
                         <Button size='sm' variant="success">NEW MATCH</Button>

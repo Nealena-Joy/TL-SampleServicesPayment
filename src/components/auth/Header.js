@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../App.css';
-import {Navbar, Nav} from 'react-bootstrap';
+import {Container, Navbar, Nav, Offcanvas} from 'react-bootstrap';
 import AST from '../assets/AST_no_background.png';
 
 
@@ -26,22 +26,28 @@ export default class Header extends Component {
 
     render() {
         return(
-            <Navbar bg="success" data-bs-theme="dark" fixed="top" sticky="top">
-                <Nav>
-                    <Navbar.Brand href='/home' style={{paddingLeft:'10px'}}>
-                        <img
-                            alt=""
-                            src={AST}
-                            height="25"
-                            className="d-inline-block align-top"
-                            />
+            <Navbar expand="sm" fixed="top" sticky="top" bg='success'>
+                <Container>
+                    <Navbar.Brand href='/home'>
+                        <img alt="AST" src={AST} height="25" className="d-inline-block align-top"/>
                     </Navbar.Brand>
-                </Nav>
-                <Navbar.Collapse className="justify-content-end">
-                    <Nav>
-                        <Nav.Link style={{color:'whitesmoke',fontSize:'12px'}} onClick={this.handleLogout}>Logout</Nav.Link> 
-                    </Nav>
-                </Navbar.Collapse>
+                    <Navbar.Offcanvas id="offcanvasNavbar-expand" placement="end" >
+                        <Offcanvas.Header closeButton>
+                            <Offcanvas.Title>Menu</Offcanvas.Title>
+                        </Offcanvas.Header>
+                        <Offcanvas.Body>
+                            <Nav className='me-auto'>
+                                <Nav.Link href='/home'>Home</Nav.Link>
+                                <Nav.Link href='/rankings'>Rankings</Nav.Link>
+                                <Nav.Link href='/match/records'>Matches</Nav.Link>
+                                <Nav.Link href='/players'>Players</Nav.Link>
+                                <Nav.Link className="justify-content-end" onClick={this.handleLogout}>Logout</Nav.Link> 
+                            </Nav>
+                        </Offcanvas.Body>
+                        
+                    </Navbar.Offcanvas>
+                    <Navbar.Toggle aria-controls='offcanvasNavbar-expand-false' />
+                </Container>
             </Navbar>
         )
     };

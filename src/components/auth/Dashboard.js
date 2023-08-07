@@ -19,57 +19,63 @@ export default class Dashboard extends React.Component {
         const FIRST_NAME=localStorage.getItem('FIRST_NAME');
         
         return (
-            <Container style={{padding:'0'}}>
-                <Container style={{backgroundColor:'blue',padding:'10% 0'}}>
-                    Welcome, Coach {FIRST_NAME}!
-                </Container>
-                <Container className="d-grid gap-2">
-                    <Button href='/rankings' size="lg" style={{textAlign:'left'}}>
-                        <img 
-                            alt=""
-                            src={Icon_Rank}
-                            height="50"
-                            className="d-inline-block align-top menu-icon"
-                        />{' '}
-                        | RANKINGS
-                    </Button>
-                </Container>
-                <Container className="d-grid gap-2">
-                    <Button href='/match-records' size="lg" style={{textAlign:'left'}}>
-                        <img 
-                            alt=""
-                            src={Icon_Racket}
-                            height="50"
-                            className="d-inline-block align-top menu-icon"
-                        />{' '}
-                        | MATCH RECORDS
-                    </Button>
-                </Container>
-                <Container className="d-grid gap-2">
-                    <Button href='/more' size="lg" style={{textAlign:'left'}}>
-                        <img 
-                            alt=""
-                            src={Icon_Add}
-                            height="50"
-                            className="d-inline-block align-top menu-icon"
-                        />{' '}
-                        | NEW MATCH
-                    </Button>
-                </Container>
-                <Container className="d-grid gap-2">
-                    <Button href='/profiles' size="lg" style={{textAlign:'left'}}>
-                        <img 
-                            alt=""
-                            src={Icon_Profile}
-                            height="50"
-                            className="d-inline-block align-top menu-icon"
-                        />{' '}
-                        | PLAYER PROFILES
-                    </Button>
-                </Container>
-
-            </Container>
+            <div>
+                <div style={{backgroundColor:'blue',padding:'10% 0'}}>
+                    <Container>Welcome, Coach {FIRST_NAME}!</Container>
+                </div>
+                <div>
+                    <Container>
+                        <div>Latest Matches</div>
+                        <div>*** Matches Here ***</div>
+                    </Container>
+                </div>
+                <div>
+                    <Container className="d-grid gap-2">
+                        <Button href='/rankings' size="lg" style={{textAlign:'left'}}>
+                            <img 
+                                alt=""
+                                src={Icon_Rank}
+                                height="50"
+                                className="d-inline-block align-top menu-icon"
+                            />{' '}
+                            | RANKINGS
+                        </Button>
+                    </Container>
+                    <Container className="d-grid gap-2">
+                        <Button href='/match/records' size="lg" style={{textAlign:'left'}}>
+                            <img 
+                                alt=""
+                                src={Icon_Racket}
+                                height="50"
+                                className="d-inline-block align-top menu-icon"
+                            />{' '}
+                            | MATCH RECORDS
+                        </Button>
+                    </Container>
+                    <Container className="d-grid gap-2">
+                        <Button href='/match/add' size="lg" style={{textAlign:'left'}}>
+                            <img 
+                                alt=""
+                                src={Icon_Add}
+                                height="50"
+                                className="d-inline-block align-top menu-icon"
+                            />{' '}
+                            | NEW MATCH
+                        </Button>
+                    </Container>
+                    <Container className="d-grid gap-2">
+                        <Button href='/profiles' size="lg" style={{textAlign:'left'}}>
+                            <img 
+                                alt=""
+                                src={Icon_Profile}
+                                height="50"
+                                className="d-inline-block align-top menu-icon"
+                            />{' '}
+                            | PLAYER PROFILES
+                        </Button>
+                    </Container>
+                </div>    
+            </div>
         )
-            
     }
 }

@@ -4,7 +4,7 @@ import './App.css';
 import Login from './components/auth/Login';
 import Menu from './components/auth/Menu';
 import PlayerList from './components/playerComponents/PlayerList';
-import MatchRecords from './components/playerComponents/MatchRecords';
+import MatchRecords from './components/matchComponents/MatchRecords';
 import Header from './components/auth/Header';
 import MatchCreation from './components/matchComponents/MatchCreation';
 import Dashboard from './components/auth/Dashboard';
@@ -30,9 +30,9 @@ export default function App() {
                       <Routes style={{padding:"0"}}>
                           <Route path="/home" element={<Dashboard />} />
                           <Route path="/rankings" element={<PlayerList />} />
-                          <Route path="/match-records" element={<MatchRecords />} />
+                          <Route path="/match/records" element={<MatchRecords />} />
                           <Route path="/profiles" element={<PointCalculation />} />
-                          <Route path="/more" element={<MatchCreation />} />
+                          <Route path="/match/add" element={<MatchCreation />} />
                       </Routes>
                     {/* <Menu /> */}
                 </div>
