@@ -11,7 +11,7 @@ export default class BreadcrumbBar extends React.Component {
 
     render() {
         return(
-            <div style={{backgroundColor:'darkgrey'}}>
+            <div style={{backgroundColor:'darkgrey',padding:'0 10px'}}>
                 <Breadcrumb> 
                     <Breadcrumb.Item href='/home'>Home</Breadcrumb.Item>
                     <Breadcrumb.Item href='/rankings'>Rankings</Breadcrumb.Item>

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import { Container } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import BreadcrumbBar from '../auth/BreadcrumbBar.js';
 
 

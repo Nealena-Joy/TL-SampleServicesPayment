@@ -190,8 +190,7 @@ export default class MatchCreation extends React.Component {
                     <Row>
                         <Button size='sm' variant="success">NEW MATCH</Button>
                     </Row>
-                </Container>
-                
+                </Container>                
                 <Container style={{padding:'5px'}}>
                     <Form size='sm' >
 
