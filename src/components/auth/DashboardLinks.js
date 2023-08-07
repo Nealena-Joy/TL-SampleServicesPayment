@@ -27,8 +27,8 @@ export default class DashboardLinks extends React.Component {
             <div>
                 <Row xs={2} md={4}>
                     {Cards.map((CardContent,i) => (
-                        <Col>
-                            <Card key={i} style={{backgroundColor:'lightblue', margin:'1em 0',height:'95%'}} href={CardContent.Link}>
+                        <Col key={i}>
+                            <Card style={{backgroundColor:'lightblue', margin:'1em 0',height:'95%'}} href={CardContent.Link}>
                                 <Card.Body>
                                     <Card.Subtitle>{CardContent.Title}</Card.Subtitle>
                                     <Card.Text>

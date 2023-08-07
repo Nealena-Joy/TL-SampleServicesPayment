@@ -9,8 +9,10 @@ export default class LatestMatches extends React.Component {
         super(props);
         this.state = {
             MatchRecords: [],
-            WinnerIndP1: '',
-            WinnerIndP2: '',
+            WinnerP1: '',
+            WinnerP2: '',
+            textColorP1: 'black',
+            textColorP2: 'black'
         }
 
     }
@@ -27,26 +29,28 @@ export default class LatestMatches extends React.Component {
         .then((response) => {
             // console.log("MatchRecords:", response.MatchRecords);
             this.setState({MatchRecords: response.MatchRecords})
+    
         })
         .catch((error) => console.log("ERROR! [at fetchMatchRecords]:", error))
     }
 
     componentDidMount(){
-        this.fetchMatchRecords()
+        this.fetchMatchRecords();
     }
 
     formatDate(MATCH_DATE) {
-        return(<div>{MATCH_DATE}</div>)
+        return(<>{MATCH_DATE}</>)
     }
 
-    winnerIndicator(MatchRecord) {
-        if (MatchRecord.MATCH_WINNER===MatchRecord.PLAYER1) {
-            this.setState({WinnerIndP1: '✓', WinnerIndP2: ''})
+    WinnerCheckP1(MatchRecord,i) {
+        if (MatchRecord.PLAYER1===MatchRecord.MATCH_WINNER) {
+            return(<>✔️</>)
+        }
+    }
 
-        } else if (MatchRecord.MATCH_WINNER===MatchRecord.PLAYER2) {
-            this.setState({WinnerIndP1: '', WinnerIndP2: '✓'})
-        } else {
-            console.log("[ERROR] Winner Indicator")
+    WinnerCheckP2(MatchRecord,i) {
+        if (MatchRecord.PLAYER2===MatchRecord.MATCH_WINNER) {
+            return(<>✔️</>)
         }
     }
 
@@ -55,42 +59,40 @@ export default class LatestMatches extends React.Component {
             <div style={{}}>
                 <Row xs={2} md={1}>
                 {this.state.MatchRecords.sort((a,b)=>a.MATCH_DATE<b.MATCH_DATE?1:-1).slice(Math.max(this.state.MatchRecords.length-5,0)).map((MatchRecord, i)=>(
-                    <Col xs={12}>
-                        <Card key={i} style={{width:'100%'}}>
-                                <Card.Body style={{padding:'5px'}}>
-                                    <Card.Subtitle><Badge>{MatchRecord.LEVEL} Stage</Badge></Card.Subtitle>
-                                    <Card.Text>
-                                        <Container>
-                                            <Row>
-                                                <Col xs={6}>
-                                                    {MatchRecord.PLAYER1}
-                                                </Col>
-                                                <Col xs={2}>
-                                                    {this.winnerIndicator(MatchRecord)}
-                                                    {this.state.WinnerP1}
-                                                </Col>
-                                                <Col xs={2}>
-                                                    {MatchRecord.PLAYER1_SCORE}
-                                                </Col>
-                                            </Row>
-                                            <Row>
-                                                <Col xs={6}>
-                                                    {MatchRecord.PLAYER2}
-                                                </Col>
-                                                <Col xs={2}>
-                                                    {this.winnerIndicator(MatchRecord)}
-                                                    {this.state.WinnerIndP2}
-                                                </Col>
-                                                <Col xs={2}>
-                                                    {MatchRecord.PLAYER2_SCORE}
-                                                </Col>
-                                            </Row>
+                    <Col key={i} xs={12}>
+                        <Card style={{width:'100%'}}>
+                            <Card.Header style={{padding:'5px', fontSize:'12px'}}>{MatchRecord.LEVEL} Stage</Card.Header>
+                            <Card.Body style={{padding:'5px'}}>
+                                <Card.Text>
+                                    <Container>
+                                        <Row>
+                                            <Col xs={8}>
+                                                {MatchRecord.PLAYER1}
+                                            </Col>
+                                            <Col xs={2}>
+                                                {this.WinnerCheckP1(MatchRecord,i)}                                                    
+                                            </Col>
+                                            <Col xs={2}>
+                                                {MatchRecord.PLAYER1_SCORE}
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col xs={8}>
+                                                {MatchRecord.PLAYER2}
+                                            </Col>
+                                            <Col xs={2}>
+                                                {this.WinnerCheckP2(MatchRecord,i)}                                                    
+                                            </Col>
+                                            <Col xs={2}>
+                                                {MatchRecord.PLAYER2_SCORE}
+                                            </Col>
+                                        </Row>
 
 
-                                        </Container>
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer style={{padding:'5px', fontSize:'10px'}}>{this.formatDate(MatchRecord.MATCH_DATE)}</Card.Footer>
+                                    </Container>
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer style={{padding:'5px', fontSize:'10px'}}>{this.formatDate(MatchRecord.MATCH_DATE)}</Card.Footer>
                         </Card>
                     </Col>
                 ))}  

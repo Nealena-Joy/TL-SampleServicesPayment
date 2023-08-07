@@ -20,27 +20,26 @@ export default function App() {
     const protectedViews = () => {
       // console.log("Token:", TOKEN)
 
-      if(TOKEN == null) {
-        return (<Login />)
-      } else {
-          if(USER_ROLE === 'Coach') {
-            return(
-                <div style={{height:'100%'}}>
-                    <Header />
-                      <Routes style={{padding:"0"}}>
-                          <Route path="/home" element={<Dashboard />} />
-                          <Route path="/rankings" element={<PlayerList />} />
-                          <Route path="/match/records" element={<MatchRecords />} />
-                          <Route path="/profiles" element={<PointCalculation />} />
-                          <Route path="/match/add" element={<MatchCreation />} />
-                      </Routes>
-                    {/* <Menu /> */}
-                </div>
-            )
-          } else {
-            return(<Login />)
-          }
-      }
+        if(TOKEN == null) {
+            return (<Login />)
+        } else {
+            if(USER_ROLE === 'Coach') {
+                return(
+                    <div style={{height:'100%'}}>
+                        <Header />
+                        <Routes style={{padding:"0"}}>
+                            <Route path="/home" element={<Dashboard />} />
+                            <Route path="/rankings" element={<PlayerList />} />
+                            <Route path="/match/records" element={<MatchRecords />} />
+                            <Route path="/profiles" element={<PointCalculation />} />
+                            <Route path="/match/add" element={<MatchCreation />} />
+                        </Routes>
+                    </div>
+                )
+            } else {
+                return(<Login />)
+            }
+        }
     }
     
     return(
