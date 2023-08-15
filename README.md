@@ -74,3 +74,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1 - Calculate Match Winner - DONE
 2 - If no scores, then should not persist to DB - DONE
 3 - Fix menu padding - DONE
+4 - DB merging - in Match Records view pending match records, ask to review before applying to current rankings (add column for PendingPoints Y or null)
+5 - DB merging - in Players table, add column for previous points

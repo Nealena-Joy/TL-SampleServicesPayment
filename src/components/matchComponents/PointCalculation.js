@@ -5,7 +5,15 @@ import BreadcrumbBar from '../auth/BreadcrumbBar.js';
 
 
 export default class PointCalculation extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            
+        }
 
+    }
+
+    
 
     render() {
         return(

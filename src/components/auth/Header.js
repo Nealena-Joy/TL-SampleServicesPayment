@@ -28,7 +28,7 @@ export default class Header extends Component {
         return(
             <Navbar expand="sm" fixed="top" sticky="top" bg='success'>
                 <Container>
-                    <Navbar.Brand href='/home'>
+                    <Navbar.Brand href='/'>
                         <img alt="AST" src={AST} height="25" className="d-inline-block align-top"/>
                     </Navbar.Brand>
                     <Navbar.Offcanvas id="offcanvasNavbar-expand" placement="end" >
@@ -37,10 +37,11 @@ export default class Header extends Component {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className='me-auto'>
-                                <Nav.Link href='/home'>Home</Nav.Link>
+                                <Nav.Link href='/'>Home</Nav.Link>
                                 <Nav.Link href='/rankings'>Rankings</Nav.Link>
-                                <Nav.Link href='/match/records'>Matches</Nav.Link>
-                                <Nav.Link href='/players'>Players</Nav.Link>
+                                <Nav.Link href='/match/records'>Match Results</Nav.Link>
+                                <Nav.Link href='/players'>Profiles</Nav.Link>
+                                <Nav.Link href='/Feedback'>Feedback</Nav.Link>
                                 <Nav.Link className="justify-content-end" onClick={this.handleLogout}>Logout</Nav.Link> 
                             </Nav>
                         </Offcanvas.Body>

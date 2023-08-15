@@ -1,14 +1,14 @@
 import React from 'react';
-import { Table, Container, Button, ButtonGroup, Row, Form } from 'react-bootstrap';
+import { Table, Container, Button, Row, Form, Col, Modal } from 'react-bootstrap';
 import '../../App.css';
 import APIURL from '../helpers/environment';
-import Menu from '../auth/Menu.js';
 import BreadcrumbBar from '../auth/BreadcrumbBar.js';
 
 export default class PlayerList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            filterMatchType: 'Singles',
             filterLevel: 'Red',
             PlayerListFilter: 'All',
             radio: '',
@@ -16,7 +16,10 @@ export default class PlayerList extends React.Component {
             PlayersByLevel: [],
             Value: '',
             MATCHES_PLAYED: '',
+            show: false
         }
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
 
     }
 
@@ -47,6 +50,15 @@ export default class PlayerList extends React.Component {
         }
     }
 
+    //!  TOGGLE FILTER OFFCANVAS
+    handleShow(e) {
+        this.setState({show: true})
+        console.log("handle show:", this.state.show)
+    }
+
+    handleClose(e) {
+        this.setState({show: false})
+    }
     
 
     render() {
@@ -54,16 +66,52 @@ export default class PlayerList extends React.Component {
             <Container Container fluid className='container' style={{padding:'0', overflowY:'auto'}}>
                 <Container style={{padding:'0'}}><BreadcrumbBar /></Container>
                 <Container className='container' style={{paddingBottom:'5px'}}>
-                    <Row>
-                        <Button size='sm' variant="success">MATCH PLAY RANKINGS</Button>
-                    </Row>
+                    <h5>Player Rankings</h5>
                 </Container>
+                
+                <Container>
+                    <Row>
+                        <Col xs={7}>
+                            <h5>{this.state.filterMatchType} - {this.state.filterLevel}</h5>
+                        </Col>
+                        <Col>
+                            <Button size='sm' onClick={this.handleShow}>
+                                Filters
+                            </Button>
+                        </Col>
+                    </Row>
 
-                <Form.Select size="sm" onChange={(e)=>this.setState({filterLevel: e.target.value})}>
-                    <option value="Red">Red Ball Stage</option>
-                    <option value="Orange">Orange Ball Stage</option>
-                    <option value="Green">Green Ball Stage</option>
-                </Form.Select>
+                        <Modal show={this.state.show} onHide={this.handleClose}>
+                            <Modal.Header closeButton>
+                                <Modal.Title>Filters</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <Form.Group>
+                                    <Form.Select size="sm" onChange={(e)=>this.setState({filterMatchType: e.target.value})}>
+                                        <option>Singles</option>
+                                        <option disabled>Doubles</option>
+                                    </Form.Select>
+                                </Form.Group>
+                                <br/>
+                                <Form.Group>
+                                    <Form.Select size="sm" onChange={(e)=>this.setState({filterLevel: e.target.value})}>
+                                        <option value="Red">Red Ball Stage</option>
+                                        <option value="Orange">Orange Ball Stage</option>
+                                        <option value="Green">Green Ball Stage</option>
+                                    </Form.Select>
+                                </Form.Group>
+                                <br/>
+                                <Form.Group>
+                                    <Form.Label>Columns</Form.Label>
+                                    <Form.Check label="No. of Wins"/>
+                                    <Form.Check label="No. of Losses"/>
+                                    <Form.Check label="Win Percent"/>
+                                    <Form.Check label="Previous Stars/Points"/>
+                                    <Form.Check label="Current Stars/Points"/>
+                                </Form.Group>
+                            </Modal.Body>
+                        </Modal>
+                </Container>
                 
                 <Container>
                     <Row>

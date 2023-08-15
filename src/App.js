@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Login from './components/auth/Login';
-import Menu from './components/auth/Menu';
 import PlayerList from './components/playerComponents/PlayerList';
 import MatchRecords from './components/matchComponents/MatchRecords';
 import Header from './components/auth/Header';
 import MatchCreation from './components/matchComponents/MatchCreation';
 import Dashboard from './components/auth/Dashboard';
 import PointCalculation from './components/matchComponents/PointCalculation';
+import Feedback from './components/auth/Feedback';
 
 export default function App() {
 
@@ -28,11 +28,12 @@ export default function App() {
                     <div style={{height:'100%'}}>
                         <Header />
                         <Routes style={{padding:"0"}}>
-                            <Route path="/home" element={<Dashboard />} />
+                            <Route path="/" element={<Dashboard />} />
                             <Route path="/rankings" element={<PlayerList />} />
                             <Route path="/match/records" element={<MatchRecords />} />
                             <Route path="/profiles" element={<PointCalculation />} />
                             <Route path="/match/add" element={<MatchCreation />} />
+                            <Route path="/feedback" element={<Feedback />} />
                         </Routes>
                     </div>
                 )

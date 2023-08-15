@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Button, Col, Breadcrumb } from 'react-bootstrap';
+import { Container, Row, Button, Col, Breadcrumb, Dropdown } from 'react-bootstrap';
 import '../../App.css';
 import APIURL from '../helpers/environment';
 import BreadcrumbBar from '../auth/BreadcrumbBar.js';
@@ -9,7 +9,8 @@ export default class MatchRecords extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            MatchRecords: []
+            MatchRecords: [],
+            filterOption: ' ',
         }
 
     }
@@ -44,6 +45,26 @@ export default class MatchRecords extends React.Component {
                         <Button size='sm' variant="success">MATCH RESULTS</Button>
                     </Row>
                 </Container>
+                <Container>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic" size="sm">
+                            Filter
+                        </Dropdown.Toggle>
+                        <div>{this.state.filterOption}</div>
+                        <Dropdown.Menu>
+                            <Dropdown.Item defaultChecked href="#/latest" onClick={e=>this.setState({filterOption: 'Latest to Oldest'})}>Latest to Oldest</Dropdown.Item>
+                            <Dropdown.Item href="#/review" onClick={e=>this.setState({filterOption: 'Pending Points'})}>For Review</Dropdown.Item>
+                            <Dropdown.Item href="#/red" onClick={e=>this.setState({filterOption: 'Red'})}>Red</Dropdown.Item>
+                            <Dropdown.Item href="#/orange" onClick={e=>this.setState({filterOption: 'Orange'})}>Orange</Dropdown.Item>
+                            <Dropdown.Item href="#/green" onClick={e=>this.setState({filterOption: 'Green'})}>Green</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Container>
+
+                <Container>
+
+                    
+                </Container>
 
                 {this.state.MatchRecords.sort((a,b)=>a.MATCH_DATE<b.MATCH_DATE?1:-1).map((MatchRecord, index)=>(
                     <Container>
@@ -64,12 +85,6 @@ export default class MatchRecords extends React.Component {
                         </Container>
                     </Container>
                 ))}
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
 
             </Container>
         )

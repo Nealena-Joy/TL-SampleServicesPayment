@@ -47,7 +47,7 @@ export default class Login extends Component {
             localStorage.setItem('LAST_NAME', LAST_NAME);
             localStorage.setItem('USERNAME', USERNAME);
             localStorage.setItem('ID', ID);
-            window.location.href = `/home`;   
+            window.location.href = `/`;   
         })
         .catch((error) => {
             console.log("Login Error:", error)

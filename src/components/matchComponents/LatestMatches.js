@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import { Container, Card, Row, Col, Button, Badge } from 'react-bootstrap';
+import { Container, Card, Row, Col } from 'react-bootstrap';
 import APIURL from '../helpers/environment';
 
 
@@ -56,7 +56,7 @@ export default class LatestMatches extends React.Component {
 
     render() {
         return(
-            <div style={{}}>
+            <div>
                 <Row xs={2} md={1}>
                 {this.state.MatchRecords.sort((a,b)=>a.MATCH_DATE<b.MATCH_DATE?1:-1).slice(Math.max(this.state.MatchRecords.length-5,0)).map((MatchRecord, i)=>(
                     <Col key={i} xs={12}>
@@ -87,8 +87,6 @@ export default class LatestMatches extends React.Component {
                                                 {MatchRecord.PLAYER2_SCORE}
                                             </Col>
                                         </Row>
-
-
                                     </Container>
                                 </Card.Text>
                             </Card.Body>
