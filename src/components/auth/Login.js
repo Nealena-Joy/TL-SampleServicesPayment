@@ -98,7 +98,7 @@ export default class Login extends Component {
 
                 {/* LOGIN MODAL */}
                 <Modal show={this.state.showLoginModal} onHide={this.handleClose} backdrop='static'>
-                    <Modal.Body><Container>{this.state.loginError}{' '}<Button size='sm' onClick={this.handleClose}>X</Button></Container></Modal.Body>
+                    <Modal.Body><Container>{this.state.loginError}{' '}<Button variant='secondary' size='sm' onClick={this.handleClose}>X</Button></Container></Modal.Body>
                 </Modal>
 
                 {/* REGISTER MODAL */}
