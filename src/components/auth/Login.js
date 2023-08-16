@@ -54,7 +54,7 @@ export default class Login extends Component {
             window.location.href = `/`;   
         })
         .catch((error) => {
-            console.log("Login Error:", error)
+            // console.log("Login Error:", error)
             this.setState({
                 showLoginModal: true,
                 loginError: "Incorrect username/email or password. Please try again.",
