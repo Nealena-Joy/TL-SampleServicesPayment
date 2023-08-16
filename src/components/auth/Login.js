@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../App.css';
-import {Form, Button, Container, Modal} from 'react-bootstrap';
+import {Form, Button, Container, Modal, Spinner} from 'react-bootstrap';
 import APIURL from '../helpers/environment';
 import RegisterUser from '../auth/RegisterUser';
 import AST from '../assets/AST_no_background.png';
@@ -14,6 +14,8 @@ export default class Login extends Component {
             loginError: '',
             show: false,
             Authenticated: false,
+            loggedInState: '',
+            showLoginModal: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleShow = this.handleShow.bind(this);
@@ -24,7 +26,9 @@ export default class Login extends Component {
     //!  LOGIN
     handleSubmit(e) {
         e.preventDefault();
-        console.log("USERNAME: " + this.state)
+        // console.log("USERNAME: " + this.state)
+
+        this.setState({loggedInState: 'logging in'})
 
         fetch(`${APIURL}/auth/login`,{
             method: 'POST',
@@ -52,7 +56,9 @@ export default class Login extends Component {
         .catch((error) => {
             console.log("Login Error:", error)
             this.setState({
-                loginError: "Incorrect username/email or password. Please try again."
+                showLoginModal: true,
+                loginError: "Incorrect username/email or password. Please try again.",
+                loggedInState: ''
             })
         })
     };
@@ -63,7 +69,7 @@ export default class Login extends Component {
     }
 
     handleClose(e) {
-        this.setState({show: false})
+        this.setState({show: false, showLoginModal: false})
     }
 
 
@@ -85,13 +91,19 @@ export default class Login extends Component {
                             <Form.Control required name="PASSWORD" type="password" rows={3} onChange={(e)=>this.setState({PASSWORD: e.target.value})}/>   
                         </Form.Group>
                         <Container style={{display:'flex',justifyContent:'center'}}>
-                            <Button variant="success" type='submit' style={{borderRadius:"50px",width:'50%'}}>LOG IN</Button>
+                            {this.state.loggedInState === 'logging in' ? <Spinner/> : <Button variant="success" type='submit' style={{borderRadius:"50px",width:'50%'}}>LOG IN</Button>}
                         </Container>
                     </Form>
                 </Container>
 
+                {/* LOGIN MODAL */}
+                <Modal show={this.state.showLoginModal} onHide={this.handleClose} backdrop='static'>
+                    <Modal.Body><Container>{this.state.loginError}{' '}<Button size='sm' onClick={this.handleClose}>X</Button></Container></Modal.Body>
+                </Modal>
+
+                {/* REGISTER MODAL */}
                 <Container style={{margin:'50px',textAlign:'center',textDecoration:'underline'}}>
-                    <p onClick={this.handleShow} >Register</p>
+                    <p onClick={this.handleShow}>Register</p>
                 </Container>
 
                 <Modal show={this.state.show} fullscreen onHide={this.handleClose}>
