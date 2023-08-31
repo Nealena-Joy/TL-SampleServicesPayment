@@ -26,7 +26,7 @@ export default class Dashboard extends React.Component {
                 <div className='DashboardLinksC'>
                     <Container>
                         <DashboardLinks />
-                    </Container>
+                    </Container> 
                 </div>
                 <div className='LatestMatchesC'>
                     <Container>

@@ -1,3 +1,7 @@
+/*
+* Passed state values to match record filter class (parent to child)
+* component did update function - updates the record list
+*/
 import React from 'react';
 import { Container, Row, Button, Col, Dropdown } from 'react-bootstrap';
 import '../../App.css';
@@ -55,43 +59,44 @@ export default class MatchRecords extends React.Component {
         }
 
         return(
-            <Container fluid className='container' style={{padding:'0', overflowY:'auto'}}>
+            <div fluid className='container' style={{padding:'0'}}>
                 <Container style={{paddingBottom:'5px'}}>
                     <Row>
                         <Button size='sm' variant="success">MATCH RESULTS</Button>
                     </Row>
                 </Container>
 
-                <Container>
+                <Container style={{backgroundColor:'lightgrey',overflowX:'auto',whiteSpace:'nowrap'}}>
                     <MatchRecordFilter FilterTitle={this.state.FilterTitle} FilterValue={this.state.FilterValue} handleFilterChange={this.handleFilterChange} />
                 </Container>
 
                 <Container>
                     <div>{this.state.filterOption}</div>
                 </Container>
-
-                {this.state.MatchRecords.sort((a,b)=>a.MATCH_DATE<b.MATCH_DATE?1:-1).map((MatchRecord, index)=>(
-                <Container key={index+1}>
-                    <Container>
-                        <Row>
-                            <Col xs={8}>{index+1} ‣ Date: {MatchRecord.MATCH_DATE} ‣ {MatchRecord.LEVEL}</Col>
-                            <Col xs={1}>Edit</Col>
-                        </Row>
-                        <Row className="">
-                            <Col xs={8}>
-                                <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER1}</Row>
-                                <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER2}</Row>
-                            </Col>
-                            <Col xs={1}>
-                                <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER1_SCORE}</Row>
-                                <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER2_SCORE}</Row>
-                            </Col>
-                        </Row>
-                    </Container>
+                
+                <Container>
+                    <Row>
+                    {this.state.MatchRecords.sort((a,b)=>a.MATCH_DATE<b.MATCH_DATE?1:-1).map((MatchRecord, index)=>(
+                        <Col key={index+1} sm={6} style={{padding:'15px'}}>
+                            <Row style={{fontSize:'12px'}}>
+                                <Col xs={9}>{index+1} ‣ {MatchRecord.MATCH_DATE} ‣ {MatchRecord.LEVEL}</Col>
+                                <Col xs={2}>Edit</Col>
+                            </Row>
+                            <Row>
+                                <Col xs={9}>
+                                    <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER1}</Row>
+                                    <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER2}</Row>
+                                </Col>
+                                <Col xs={2}>
+                                    <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER1_SCORE}</Row>
+                                    <Row style={rowStyle} className="square border border-1">{MatchRecord.PLAYER2_SCORE}</Row>
+                                </Col>
+                            </Row>
+                        </Col>
+                    ))}
+                    </Row>
                 </Container>
-                ))}
-{console.log("Filter: ", this.state.FilterValue)}
-            </Container>
+            </div>
         )
     }
 };

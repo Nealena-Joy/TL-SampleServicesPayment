@@ -19,6 +19,8 @@ export default class MatchCreation extends React.Component {
             ],
             MATCH_DATE: '',
             LEVEL: '',
+            SET_NO: 0,
+            MATCH_STATUS: 'Pending',
             CREATED_BY: localStorage.getItem('USERNAME'),
             MODIFIED_BY: localStorage.getItem('USERNAME')
         }
@@ -162,6 +164,8 @@ export default class MatchCreation extends React.Component {
                     PLAYER2_SCORE: this.state.allMatchScores[i].PLAYER2_SCORE,
                     MATCH_DATE: this.state.MATCH_DATE,
                     LEVEL: this.state.LEVEL,
+                    SET_NO: this.state.SET_NO,
+                    MATCH_STATUS: this.state.MATCH_STATUS,
                     CREATED_BY: this.state.CREATED_BY,
                     MODIFIED_BY: this.state.MODIFIED_BY
                 }}),
@@ -183,9 +187,6 @@ export default class MatchCreation extends React.Component {
     render() {
         return(
             <Container fluid className='container' style={{overflowY:'auto'}}>
-                <Container>
-                    <BreadcrumbBar/>
-                </Container>
                 <Container>
                     <Row>
                         <Button size='sm' variant="success">NEW MATCH</Button>
