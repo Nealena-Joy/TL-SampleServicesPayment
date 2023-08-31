@@ -2,7 +2,7 @@ import React from 'react';
 import { Table, Container, Button, Row, Form, Col, Modal } from 'react-bootstrap';
 import '../../App.css';
 import APIURL from '../helpers/environment';
-import BreadcrumbBar from '../auth/BreadcrumbBar.js';
+
 
 export default class PlayerList extends React.Component {
     constructor(props) {
@@ -16,7 +16,15 @@ export default class PlayerList extends React.Component {
             PlayersByLevel: [],
             Value: '',
             MATCHES_PLAYED: '',
-            show: false
+            // Filter Modal
+            show: false,
+            // Filters
+            formCheckWinP: true,
+            formCheckWins: true,
+            formCheckLosses: true,
+            formCheckPoints: true,
+
+
         }
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
@@ -25,7 +33,7 @@ export default class PlayerList extends React.Component {
 
     //!  Get Player List By Level
     fetchPlayersByLevel() {
-        console.log("Level Value: ", this.state.filterLevel)
+        // console.log("Level Value: ", this.state.filterLevel)
         fetch(`${APIURL}/player/view/${this.state.filterLevel}`, {            
             method: 'GET', 
             headers: new Headers({
@@ -63,8 +71,7 @@ export default class PlayerList extends React.Component {
 
     render() {
         return (
-            <Container Container fluid className='container' style={{padding:'0', overflowY:'auto'}}>
-                <Container style={{padding:'0'}}><BreadcrumbBar /></Container>
+            <Container fluid className='container' style={{padding:'0', overflowY:'auto'}}>
                 <Container className='container' style={{paddingBottom:'5px'}}>
                     <h5>Player Rankings</h5>
                 </Container>
@@ -103,11 +110,11 @@ export default class PlayerList extends React.Component {
                                 <br/>
                                 <Form.Group>
                                     <Form.Label>Columns</Form.Label>
-                                    <Form.Check label="No. of Wins"/>
-                                    <Form.Check label="No. of Losses"/>
-                                    <Form.Check label="Win Percent"/>
-                                    <Form.Check label="Previous Stars/Points"/>
-                                    <Form.Check label="Current Stars/Points"/>
+                                    <Form.Check label="No. of Wins" defaultChecked={this.state.formCheckWins} onChange={e=>this.setState({formCheckWins: !this.state.formCheckWins})}/>
+                                    <Form.Check label="No. of Losses" defaultChecked={this.state.formCheckLosses} onChange={e=>this.setState({formCheckLosses: !this.state.formCheckLosses})}/>
+                                    <Form.Check label="Win Percent" defaultChecked={this.state.formCheckWinP} onChange={e=>this.setState({formCheckWinP: !this.state.formCheckWinP})}/>
+                                    <Form.Check label="Previous Stars/Points" />
+                                    <Form.Check label="Current Stars/Points" defaultChecked={this.state.formCheckPoints} onChange={e=>this.setState({formCheckPoints: !this.state.formCheckPoints})}/>
                                 </Form.Group>
                             </Modal.Body>
                         </Modal>
@@ -120,10 +127,10 @@ export default class PlayerList extends React.Component {
                                 <tr >
                                     <th style={{padding:"0",margin:"0"}}>Rank</th>
                                     <th style={{padding:"0",margin:"0"}}>Name</th>
-                                    <th style={{padding:"0",margin:"0"}}>Win</th>
-                                    <th style={{padding:"0",margin:"0"}}>Loss</th>
-                                    <th style={{padding:"0",margin:"0"}}>Win %</th>
-                                    <th style={{padding:"0",margin:"0"}}>Stars</th>
+                                    {this.state.formCheckWins ? <th style={{padding:"0",margin:"0"}}>Win</th> : null}
+                                    {this.state.formCheckLosses ? <th style={{padding:"0",margin:"0"}}>Loss</th> : null}
+                                    {this.state.formCheckWinP ? <th style={{padding:"0",margin:"0"}}>Win %</th> : null}
+                                    {this.state.formCheckPoints ? <th style={{padding:"0",margin:"0"}}>Stars</th> : null}
                                 </tr>
                             </thead>
                             <tbody>
@@ -132,10 +139,10 @@ export default class PlayerList extends React.Component {
                                     <tr key={index+1}>
                                         <td style={{padding:"0",margin:"0"}}>{index+1}</td>
                                         <td style={{padding:"0",margin:"0"}}>{Player.FIRST_NAME} {Player.LAST_NAME}</td>
-                                        <td style={{padding:"0",margin:"0"}}>{Player.MATCHES_WON}</td>
-                                        <td style={{padding:"0",margin:"0"}}>{Player.MATCHES_PLAYED-Player.MATCHES_WON}</td>
-                                        <td style={{padding:"0",margin:"0",textAlign:"right"}}>{(Player.MATCHES_WON/Player.MATCHES_PLAYED*100).toFixed(0)} %</td>     
-                                        <td style={{padding:"0",margin:"0"}}>{Player.POINTS}</td>
+                                        {this.state.formCheckWins ? <td style={{padding:"0",margin:"0"}}>{Player.MATCHES_WON}</td> : null}
+                                        {this.state.formCheckLosses ? <td style={{padding:"0",margin:"0"}}>{Player.MATCHES_PLAYED-Player.MATCHES_WON}</td> : null}
+                                        {this.state.formCheckWinP ? <td style={{padding:"0",margin:"0",textAlign:"right"}}>{(Player.MATCHES_WON/Player.MATCHES_PLAYED*100).toFixed(0)} %</td> : null}     
+                                        {this.state.formCheckPoints ? <td style={{padding:"0",margin:"0"}}>{Player.POINTS}</td> : null}
                                     </tr>
                                 ))}
 

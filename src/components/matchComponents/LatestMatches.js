@@ -56,11 +56,10 @@ export default class LatestMatches extends React.Component {
 
     render() {
         return(
-            <div>
-                <Row xs={2} md={1}>
+            <div style={{overflowX: 'auto', whiteSpace:'nowrap'}}>
+                <div style={{}}>
                 {this.state.MatchRecords.sort((a,b)=>a.MATCH_DATE<b.MATCH_DATE?1:-1).slice(Math.max(this.state.MatchRecords.length-5,0)).map((MatchRecord, i)=>(
-                    <Col key={i} xs={12}>
-                        <Card style={{width:'100%'}}>
+                        <Card style={{width:'300px',display:'inline-block',marginRight:'10px'}}>
                             <Card.Header style={{padding:'5px', fontSize:'12px'}}>{MatchRecord.LEVEL} Stage</Card.Header>
                             <Card.Body style={{padding:'5px'}}>
                                 <Card.Text>
@@ -92,9 +91,8 @@ export default class LatestMatches extends React.Component {
                             </Card.Body>
                             <Card.Footer style={{padding:'5px', fontSize:'10px'}}>{this.formatDate(MatchRecord.MATCH_DATE)}</Card.Footer>
                         </Card>
-                    </Col>
                 ))}  
-                </Row>     
+                </div>     
             </div>
         )
     }

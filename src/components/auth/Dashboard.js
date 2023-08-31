@@ -17,16 +17,18 @@ export default class Dashboard extends React.Component {
         const FIRST_NAME=localStorage.getItem('FIRST_NAME');
         
         return (
-            <div>
-                <div style={{backgroundColor:'#c5b448',padding:'1rem 0',color:'whitesmoke'}}>
-                    <Container><h3>Welcome, Coach {FIRST_NAME}!</h3></Container>
+            <div style={{backgroundColor: 'black'}}>
+                <div className='DashboardC'>
+                    <div className='WelcomeBannerC'>
+                        <Container><h3>Welcome, Coach {FIRST_NAME}!</h3></Container>
+                    </div>
                 </div>
-                <div style={{paddingBottom:'1rem'}}>
+                <div className='DashboardLinksC'>
                     <Container>
                         <DashboardLinks />
                     </Container>
                 </div>
-                <div style={{backgroundColor:'lightgray',paddingBottom:'1rem'}}>
+                <div className='LatestMatchesC'>
                     <Container>
                         <Container style={{paddingLeft:'0'}}>Latest Matches</Container>
                         <LatestMatches />

@@ -4,7 +4,7 @@ import {Container, Navbar, Nav, Offcanvas} from 'react-bootstrap';
 import AST from '../assets/AST_no_background.png';
 
 
-export default class Header extends Component {
+export default class NavbarTop extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,7 +36,7 @@ export default class Header extends Component {
                             <Offcanvas.Title>Menu</Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                            <Nav className='me-auto'>
+                            <Nav className='me-auto NavbarTop'>
                                 <Nav.Link href='/'>Home</Nav.Link>
                                 <Nav.Link href='/rankings'>Rankings</Nav.Link>
                                 <Nav.Link href='/match/records'>Match Results</Nav.Link>

@@ -1,10 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import {Breadcrumb, Container, Navbar} from 'react-bootstrap';
-import Icon_Rank from '../assets/star.svg';
-import Icon_Match from '../assets/racket.svg';
-import Icon_Add from '../assets/add2.svg';
-import Icon_Profile from '../assets/profile.svg';
+import {Breadcrumb} from 'react-bootstrap';
 
 
 export default class BreadcrumbBar extends React.Component {

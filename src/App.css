@@ -48,3 +48,40 @@
   border-radius: 50%;
 
 }
+
+/* ROUTES (App.js) */
+.routes {
+  padding: 0;
+}
+
+/* DASHBOARD */
+.NavbarTop {
+  white-space: nowrap;
+}
+
+
+.WelcomeBannerC {
+  background-color: #686a21d5; 
+  background-image: linear-gradient(rgba(255, 242, 0, 0.376), rgba(34, 56, 106, 0.599));
+  padding: 1rem 0;
+  color: whitesmoke;
+}
+
+.DashboardC {
+  background-image: url("/src/components/assets/racket.png");
+  height: 20rem;
+  object-fit: cover;
+  background-color: #008ec3; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.DashboardLinksC {
+  padding-bottom: 1rem;
+}
+
+.LatestMatchesC {
+  background-color: lightgray;
+  padding-bottom: 1rem;
+}
