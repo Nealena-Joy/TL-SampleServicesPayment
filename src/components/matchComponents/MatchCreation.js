@@ -186,7 +186,7 @@ export default class MatchCreation extends React.Component {
 
     render() {
         return(
-            <Container fluid className='container' style={{overflowY:'auto'}}>
+            <Container fluid className='container' style={{overflowY:'auto',backgroundColor:'#ceeaff'}}>
                 <Container>
                     <Row>
                         <Button size='sm' variant="success">NEW MATCH</Button>
@@ -253,10 +253,11 @@ export default class MatchCreation extends React.Component {
                         
                     </Form>
                 </Container>
-                        
-                <p style={{color:'red'}}>Please check all details before clicking submit.</p>
-                <Button size='sm' onClick={e=>this.handleSubmit(e)} >Submit</Button>
 
+                <Container>
+                    <p style={{color:'red'}}>Please check all details before clicking submit.</p>
+                    <Button variant="success" size='sm' onClick={e=>this.handleSubmit(e)} >Submit</Button>
+                </Container>
                 <br/>
                 <br/>
                 <br/>

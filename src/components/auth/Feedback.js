@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../App.css';
+import {Container} from 'react-bootstrap';
 
 
 export default class Feedback extends React.Component {
@@ -13,7 +14,9 @@ export default class Feedback extends React.Component {
 
     render() {        
         return (
-            <div>Feedback Under Contruction</div>
+            <Container style={{padding:'0', backgroundColor: 'whitesmoke',height:'500rem'}}>
+                <p>Feedback:  Coming soon...</p>
+            </Container>
         )
     }
 }

@@ -15,7 +15,7 @@ export default class DashboardLinks extends React.Component {
         const Cards = [
             {Title:'Rankings',Text:'Check out the player rankings per category (level).', Link:'/rankings', CarouselImage: '../assets/racket.png'},
             {Title:'Match Results',Text:'View and modify match results.', Link:'/match/records'},
-            {Title:'Profiles',Text:`Add new players, as well as, view and update a player's profile.`, Link:'/profiles'},
+            {Title:'Profiles',Text:`Add new players. View and update a player's profile.`, Link:'/profiles'},
             {Title:'Add Matches',Text:'Easily record a match result.', Link:'match/add'}
         ]
         return(

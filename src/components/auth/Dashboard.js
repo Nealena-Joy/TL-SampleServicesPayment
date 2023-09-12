@@ -35,7 +35,7 @@ export default class Dashboard extends React.Component {
                         <LatestMatches />
                     </Container>
                 </div>
-                <div className='Events' style={{backgroundColor:'whitesmoke'}}>
+                <div className='Events' style={{backgroundColor:'#e8cf59'}}>
                     <Container>
                         <Container style={{paddingLeft:'0'}}>Events</Container>
                         <Events />

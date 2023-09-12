@@ -31,7 +31,7 @@ export default function App() {
                             <Route path="/" element={<Dashboard />} />
                             <Route path="/rankings" element={<PlayerRankings />} />
                             <Route path="/match/records" element={<MatchResults />} />
-                            <Route path="/players" element={<PointCalculation />} />
+                            <Route path="/profiles" element={<PointCalculation />} />
                             <Route path="/match/add" element={<MatchCreation />} />
                             <Route path="/feedback" element={<Feedback />} />
                         </Routes>
