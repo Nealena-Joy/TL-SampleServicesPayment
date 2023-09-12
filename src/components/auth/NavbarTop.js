@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../App.css';
 import {Container, Navbar, Nav, Offcanvas} from 'react-bootstrap';
-import AST from '../assets/AST_no_background.png';
+import Logo from '../assets/TennisLab-Logo.png';
 
 
 export default class NavbarTop extends Component {
@@ -26,10 +26,10 @@ export default class NavbarTop extends Component {
 
     render() {
         return(
-            <Navbar expand="sm" fixed="top" sticky="top" bg='success'>
+            <Navbar expand="sm" fixed="top" sticky="top" style={{backgroundColor:'#008ec3'}}>
                 <Container>
                     <Navbar.Brand href='/'>
-                        <img alt="AST" src={AST} height="25" className="d-inline-block align-top"/>
+                        <img alt="AST" src={Logo} height="30" className="d-inline-block align-top"/>
                     </Navbar.Brand>
                     <Navbar.Offcanvas id="offcanvasNavbar-expand" placement="end" >
                         <Offcanvas.Header closeButton>

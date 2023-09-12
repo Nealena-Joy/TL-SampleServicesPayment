@@ -67,15 +67,7 @@
   color: whitesmoke;
 }
 
-.DashboardC {
-  background-image: url("/src/components/assets/racket.png");
-  height: 20rem;
-  object-fit: cover;
-  background-color: #008ec3; /* Used if the image is unavailable */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
+
 
 .DashboardLinksC {
   padding-bottom: 1rem;
@@ -84,4 +76,37 @@
 .LatestMatchesC {
   background-color: lightgray;
   padding-bottom: 1rem;
+}
+
+
+/* MATCH RESULTS PAGE */
+.MatchResultsHeader {
+  background-image: url("/src/components/assets/MatchResults.png");
+  height: 20rem;
+  object-fit: cover;
+  background-color: #008ec3; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+/* CAROUSEL */
+
+.CarouselCaption {
+  top: 40%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+.CarouselImage {
+  box-shadow: 0 0 200px rgba(0,0,0,0.9) 
+}
+
+.DashboardLinksC {
+  object-fit: cover;
+  background-color: black; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }

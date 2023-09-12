@@ -4,7 +4,7 @@ import '../../App.css';
 import APIURL from '../helpers/environment';
 
 
-export default class PlayerList extends React.Component {
+export default class PlayerRankings extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

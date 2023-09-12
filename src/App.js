@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Login from './components/auth/Login';
-import PlayerList from './components/playerComponents/PlayerList';
-import MatchRecords from './components/matchComponents/MatchRecords';
+import PlayerRankings from './components/playerComponents/PlayerRankings';
+import MatchResults from './components/matchComponents/MatchResults';
 import NavbarTop from './components/auth/NavbarTop';
 import MatchCreation from './components/matchComponents/MatchCreation';
 import Dashboard from './components/auth/Dashboard';
@@ -25,13 +25,13 @@ export default function App() {
         } else {
             if(USER_ROLE === 'Coach') {
                 return(
-                    <div style={{height:'100%'}}>
+                    <div style={{height:'100%',backgroundColor:'#008ec3'}}>
                         <NavbarTop />
                         <Routes className='routes'>
                             <Route path="/" element={<Dashboard />} />
-                            <Route path="/rankings" element={<PlayerList />} />
-                            <Route path="/match/records" element={<MatchRecords />} />
-                            <Route path="/players" element={<PlayerList />} />
+                            <Route path="/rankings" element={<PlayerRankings />} />
+                            <Route path="/match/records" element={<MatchResults />} />
+                            <Route path="/players" element={<PointCalculation />} />
                             <Route path="/match/add" element={<MatchCreation />} />
                             <Route path="/feedback" element={<Feedback />} />
                         </Routes>

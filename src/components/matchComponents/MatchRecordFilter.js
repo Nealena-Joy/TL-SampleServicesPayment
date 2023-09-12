@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Button, Col, Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import '../../App.css';
 
 
@@ -23,7 +23,7 @@ export default class MatchRecordFilter extends React.Component {
         ]
 
         return(
-            <Nav variant='underline' defaultActiveKey="0" style={{display:'inline-block',alignItems:''}}>
+            <Nav variant='underline' defaultActiveKey="0" style={{}}>
             {buttonItems.map((buttonItem,i) => (
                 <Nav.Item key={i} style={{display:'inline-block',paddingLeft:'15px'}}>
                     <Nav.Link eventKey={i} onClick={e=>this.props.handleFilterChange(buttonItem.FilterValue)}>{buttonItem.FilterTitle}</Nav.Link>

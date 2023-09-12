@@ -3,6 +3,7 @@ import '../../App.css';
 import {Container} from 'react-bootstrap';
 import LatestMatches from '../matchComponents/LatestMatches';
 import DashboardLinks from './DashboardLinks';
+import Events from '../events/Events';
 
 export default class Dashboard extends React.Component {
     // constructor(props) {
@@ -24,14 +25,20 @@ export default class Dashboard extends React.Component {
                     </div>
                 </div>
                 <div className='DashboardLinksC'>
-                    <Container>
+                    <Container style={{padding:'0px'}}>
                         <DashboardLinks />
-                    </Container> 
+                    </Container>  
                 </div>
                 <div className='LatestMatchesC'>
                     <Container>
                         <Container style={{paddingLeft:'0'}}>Latest Matches</Container>
                         <LatestMatches />
+                    </Container>
+                </div>
+                <div className='Events' style={{backgroundColor:'whitesmoke'}}>
+                    <Container>
+                        <Container style={{paddingLeft:'0'}}>Events</Container>
+                        <Events />
                     </Container>
                 </div>
             </div>

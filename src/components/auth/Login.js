@@ -3,7 +3,7 @@ import '../../App.css';
 import {Form, Button, Container, Modal, Spinner} from 'react-bootstrap';
 import APIURL from '../helpers/environment';
 import RegisterUser from '../auth/RegisterUser';
-import AST from '../assets/AST_no_background.png';
+import Logo from '../assets/TennisLab-Logo.png';
 
 export default class Login extends Component {
     constructor(props) {
@@ -72,12 +72,11 @@ export default class Login extends Component {
         this.setState({show: false, showLoginModal: false})
     }
 
-
     render() {
         return(
             <div className="Login" style={{backgroundColor:'#282c34'}}>
                 <Container style={{display:'flex',justifyContent:'center',margin:'15px'}}>
-                    <img alt="AST" src={AST} height="50"/>
+                    <img alt="AST" src={Logo} height="50"/>
                 </Container>
 
                 <Container style={{width:'80%'}}>

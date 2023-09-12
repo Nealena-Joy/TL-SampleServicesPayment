@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
-import { Container, Card, Row, Col } from 'react-bootstrap';
 import APIURL from '../helpers/environment';
+import MatchCard from './MatchCard';
 
 
 export default class LatestMatches extends React.Component {
@@ -12,7 +12,8 @@ export default class LatestMatches extends React.Component {
             WinnerP1: '',
             WinnerP2: '',
             textColorP1: 'black',
-            textColorP2: 'black'
+            textColorP2: 'black',
+            callLatest: true
         }
 
     }
@@ -57,41 +58,8 @@ export default class LatestMatches extends React.Component {
     render() {
         return(
             <div style={{overflowX: 'auto', whiteSpace:'nowrap'}}>
-                <div style={{}}>
-                {this.state.MatchRecords.sort((a,b)=>a.MATCH_DATE<b.MATCH_DATE?1:-1).slice(Math.max(this.state.MatchRecords.length-5,0)).map((MatchRecord, i)=>(
-                        <Card style={{width:'300px',display:'inline-block',marginRight:'10px'}}>
-                            <Card.Header style={{padding:'5px', fontSize:'12px'}}>{MatchRecord.LEVEL} Stage</Card.Header>
-                            <Card.Body style={{padding:'5px'}}>
-                                <Card.Text>
-                                    <Container>
-                                        <Row>
-                                            <Col xs={8}>
-                                                {MatchRecord.PLAYER1}
-                                            </Col>
-                                            <Col xs={2}>
-                                                {this.WinnerCheckP1(MatchRecord,i)}                                                    
-                                            </Col>
-                                            <Col xs={2}>
-                                                {MatchRecord.PLAYER1_SCORE}
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col xs={8}>
-                                                {MatchRecord.PLAYER2}
-                                            </Col>
-                                            <Col xs={2}>
-                                                {this.WinnerCheckP2(MatchRecord,i)}                                                    
-                                            </Col>
-                                            <Col xs={2}>
-                                                {MatchRecord.PLAYER2_SCORE}
-                                            </Col>
-                                        </Row>
-                                    </Container>
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer style={{padding:'5px', fontSize:'10px'}}>{this.formatDate(MatchRecord.MATCH_DATE)}</Card.Footer>
-                        </Card>
-                ))}  
+                <div>
+                    <MatchCard MatchRecords={this.state.MatchRecords} WinnerCheckP1={this.state.WinnerCheckP1} callLatest={this.state.callLatest}/>
                 </div>     
             </div>
         )
