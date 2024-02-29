@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../App.css';
-import {Container, Navbar, Nav, Offcanvas} from 'react-bootstrap';
+import {Container, Navbar, Nav, Offcanvas, NavDropdown} from 'react-bootstrap';
 import Logo from '../assets/TennisLab-Logo.png';
 
 
@@ -14,38 +14,25 @@ export default class NavbarTop extends Component {
             show: '0',
             isLoggedIn: false
         };
-        this.handleLogout = this.handleLogout.bind(this);
     };
-
-    handleLogout(){
-        localStorage.clear();
-        //  Set isLoggedIn as FALSE
-        this.setState({isLoggedIn: false});
-        window.location.href = '';
-    }
 
     render() {
         return(
-            <Navbar expand="sm" fixed="top" sticky="top" style={{backgroundColor:'#008ec3'}}>
+            <Navbar expand="sm" fixed="top" style={{backgroundColor:'#008fc373'}}>
                 <Container>
                     <Navbar.Brand href='/'>
-                        <img alt="AST" src={Logo} height="30" className="d-inline-block align-top"/>
+                        <img alt="sports" src={Logo} height="30" className="d-inline-block align-top"/>
                     </Navbar.Brand>
-                    <Navbar.Offcanvas id="offcanvasNavbar-expand" placement="end" >
+                    <Navbar.Offcanvas id="offcanvasNavbar-expand" placement="end" style={{backgroundColor:'#008fc3',width:'30vh'}} >
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title>Menu</Offcanvas.Title>
+                            <Offcanvas.Title style={{color: 'whitesmoke'}}>Menu</Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className='me-auto NavbarTop'>
-                                <Nav.Link href='/'>Home</Nav.Link>
-                                <Nav.Link href='/rankings'>Rankings</Nav.Link>
-                                <Nav.Link href='/match/records'>Match Results</Nav.Link>
-                                <Nav.Link href='/players'>Profiles</Nav.Link>
-                                <Nav.Link href='/Feedback'>Feedback</Nav.Link>
-                                <Nav.Link className="justify-content-end" onClick={this.handleLogout}>Logout</Nav.Link> 
+                                <Nav.Link style={{color: 'whitesmoke'}} href='/about'>About</Nav.Link>
+                                <Nav.Link style={{color: 'whitesmoke'}} href='/services'>Services</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
-                        
                     </Navbar.Offcanvas>
                     <Navbar.Toggle aria-controls='offcanvasNavbar-expand-false' />
                 </Container>
@@ -56,4 +43,5 @@ export default class NavbarTop extends Component {
 
 /**
  * fixed vs sticky
+ * Update link contents on App.js
  */

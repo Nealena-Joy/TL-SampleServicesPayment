@@ -1,3 +1,8 @@
+INFO
+* Sample list of services (online consultation, tennis fitness, PT)
+
+=====================================================
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,11 +73,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# ast-react-2023
-
-===== UPDATES ======
-1 - Calculate Match Winner - DONE
-2 - If no scores, then should not persist to DB - DONE
-3 - Fix menu padding - DONE
-4 - DB merging - in Match Records view pending match records, ask to review before applying to current rankings (add column for PendingPoints Y or null)
-5 - DB merging - in Players table, add column for previous points
