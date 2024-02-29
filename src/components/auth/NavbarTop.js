@@ -29,7 +29,7 @@ export default class NavbarTop extends Component {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className='me-auto NavbarTop'>
-                                <Nav.Link style={{color: 'whitesmoke'}} href='/about'>About</Nav.Link>
+                                <Nav.Link style={{color: 'whitesmoke'}} href='/services'>About</Nav.Link>
                                 <Nav.Link style={{color: 'whitesmoke'}} href='/services'>Services</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>

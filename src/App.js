@@ -6,7 +6,7 @@ import ProductsList from './components/paymentsComponents/productsList';
 
 
 export default function App() {
-    
+
     return(
         <Router className='App'>
             <NavbarTop />
