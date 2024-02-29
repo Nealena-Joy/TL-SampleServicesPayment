@@ -12,8 +12,8 @@ export default function App() {
         <Router className='App'>
             <NavbarTop />
             <Routes className='routes'>
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/services" element={<ProductsList/>} />
+                <Route path="/TL-SampleServicesPayment/about" element={<AboutPage />} />
+                <Route path="/TL-SampleServicesPayment/services" element={<ProductsList/>} />
             </Routes>        
         </Router>
     );

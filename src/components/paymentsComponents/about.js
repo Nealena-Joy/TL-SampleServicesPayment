@@ -12,9 +12,9 @@ export default class about extends React.Component {
     }
     render() {
         return(
-            <div>
-                <h1>TEST</h1>
-            </div>
+            <Container style={{marginTop:'10vh'}}>
+                <h1>Ooops! Page not found :(</h1>
+            </Container>
         )
     }
 }
