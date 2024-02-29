@@ -20,7 +20,7 @@ export default class NavbarTop extends Component {
         return(
             <Navbar expand="sm" fixed="top" style={{backgroundColor:'#008fc373'}}>
                 <Container>
-                    <Navbar.Brand href='/'>
+                    <Navbar.Brand href='https://Nealena-Joy.github.io/TL-SampleServicesPayment'>
                         <img alt="sports" src={Logo} height="30" className="d-inline-block align-top"/>
                     </Navbar.Brand>
                     <Navbar.Offcanvas id="offcanvasNavbar-expand" placement="end" style={{backgroundColor:'#008fc3',width:'30vh'}} >
@@ -29,7 +29,7 @@ export default class NavbarTop extends Component {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className='me-auto NavbarTop'>
-                                <Nav.Link style={{color: 'whitesmoke'}} href='https://Nealena-Joy.github.io/TL-SampleServicesPayment'>About</Nav.Link>
+                                <Nav.Link style={{color: 'whitesmoke'}} href='https://Nealena-Joy.github.io/TL-SampleServicesPayment/about'>About</Nav.Link>
                                 <Nav.Link style={{color: 'whitesmoke'}} href='https://Nealena-Joy.github.io/TL-SampleServicesPayment'>Services</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
