@@ -2,7 +2,7 @@
   "name": "tl-sample-services-payment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Nealena-Joy.github.io/TL-SampleServicesPayment",
+  "homepage": "https://Nealena-Joy.github.io/TL-SampleServicesPayment/services",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.16.5",
