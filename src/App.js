@@ -11,7 +11,7 @@ export default function App() {
         <Router className='App'>
             <NavbarTop />
             <Routes className='routes'>
-                <Route path="/services" element={<ProductsList/>} />
+                <Route path="https://Nealena-Joy.github.io/TL-SampleServicesPayment/services" element={<ProductsList/>} />
             </Routes>        
         </Router>
     );
