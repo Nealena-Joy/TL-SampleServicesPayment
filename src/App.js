@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, HashRouter as Router } from "react-router-dom";
 import './App.css';
 import NavbarTop from './components/auth/NavbarTop';
 import AboutPage from './components/paymentsComponents/about'
@@ -11,10 +11,10 @@ export default function App() {
     return(
         <Router className='App'>
             <NavbarTop />
-            <Routes className='routes'>
+            <HashRouter className='routes'>
                 <Route path="/TL-SampleServicesPayment/about" element={<AboutPage />} />
                 <Route path="/TL-SampleServicesPayment/services" element={<ProductsList/>} />
-            </Routes>        
+            </HashRouter>        
         </Router>
     );
 }
