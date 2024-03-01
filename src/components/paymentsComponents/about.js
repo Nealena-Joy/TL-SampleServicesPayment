@@ -1,7 +1,6 @@
 import React from 'react';
-import { Accordion, Card, Container, Button, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import '../../App.css';
-import BannerImage from '../assets/SportsWallpaper.jpeg';
 
 export default class about extends React.Component {
     constructor(props) {
@@ -13,7 +12,7 @@ export default class about extends React.Component {
     render() {
         return(
             <Container style={{marginTop:'10vh'}}>
-                <h1>Ooops! Page not found :(</h1>
+                <h1>Ooops! Page not found :( 11111111111111111</h1>
             </Container>
         )
     }
