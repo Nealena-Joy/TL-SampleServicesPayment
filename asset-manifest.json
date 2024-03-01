@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/TL-SampleServicesPayment/services/static/css/main.8a368ec7.css",
-    "main.js": "/TL-SampleServicesPayment/services/static/js/main.a23278d4.js",
-    "static/js/787.209b5b61.chunk.js": "/TL-SampleServicesPayment/services/static/js/787.209b5b61.chunk.js",
-    "static/media/MatchResults.png": "/TL-SampleServicesPayment/services/static/media/MatchResults.dde55f144552f6cebba4.png",
-    "static/media/TennisLab-Logo.png": "/TL-SampleServicesPayment/services/static/media/TennisLab-Logo.a5ec436b547fddeeb628.png",
-    "static/media/SportsWallpaper.jpeg": "/TL-SampleServicesPayment/services/static/media/SportsWallpaper.772c87c5c5a087d3fa33.jpeg",
-    "index.html": "/TL-SampleServicesPayment/services/index.html",
-    "main.8a368ec7.css.map": "/TL-SampleServicesPayment/services/static/css/main.8a368ec7.css.map",
-    "main.a23278d4.js.map": "/TL-SampleServicesPayment/services/static/js/main.a23278d4.js.map",
-    "787.209b5b61.chunk.js.map": "/TL-SampleServicesPayment/services/static/js/787.209b5b61.chunk.js.map"
+    "main.css": "/TL-SampleServicesPayment/static/css/main.942fcbc0.css",
+    "main.js": "/TL-SampleServicesPayment/static/js/main.30afe9e8.js",
+    "static/js/787.209b5b61.chunk.js": "/TL-SampleServicesPayment/static/js/787.209b5b61.chunk.js",
+    "static/media/MatchResults.png": "/TL-SampleServicesPayment/static/media/MatchResults.dde55f144552f6cebba4.png",
+    "static/media/TennisLab-Logo.png": "/TL-SampleServicesPayment/static/media/TennisLab-Logo.a5ec436b547fddeeb628.png",
+    "static/media/SportsWallpaper.jpeg": "/TL-SampleServicesPayment/static/media/SportsWallpaper.772c87c5c5a087d3fa33.jpeg",
+    "index.html": "/TL-SampleServicesPayment/index.html",
+    "main.942fcbc0.css.map": "/TL-SampleServicesPayment/static/css/main.942fcbc0.css.map",
+    "main.30afe9e8.js.map": "/TL-SampleServicesPayment/static/js/main.30afe9e8.js.map",
+    "787.209b5b61.chunk.js.map": "/TL-SampleServicesPayment/static/js/787.209b5b61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a368ec7.css",
-    "static/js/main.a23278d4.js"
+    "static/css/main.942fcbc0.css",
+    "static/js/main.30afe9e8.js"
   ]
 }
