@@ -41,7 +41,7 @@ export default class tennisFitnessGroup extends React.Component {
                                         <Card.Title>Individual Tennis S&C Assessment Consultation</Card.Title>
                                         <p>1 hour</p>
                                         <p>
-                                            Transform your game and dominate the court with our tennis strength and conditioning program! Our tailored sessions are designed to enhance every aspect of your game by focusing on building strength, agility, speed, and endurance specific to tennis movements. Whether you're a competitive player looking to gain an edge or a recreational player seeking to elevate your game, our tennis strength and conditioning program will help you develop the physical prowess needed to outmatch your opponents. 
+                                            Elevate your tennis game with our strength and conditioning program! Led by certified trainers, our tailored sessions enhance strength, agility, and endurance specific to tennis movements. Whether you're a competitive player or a recreational enthusiast, join us to unleash your full potential on the court! 
                                         </p>
                                     </Card.Body>
                                     <Card.Footer>

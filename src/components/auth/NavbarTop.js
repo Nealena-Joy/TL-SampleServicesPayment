@@ -20,7 +20,7 @@ export default class NavbarTop extends Component {
         return(
             <Navbar expand="sm" fixed="top" style={{backgroundColor:'#008fc373'}}>
                 <Container>
-                    <Navbar.Brand href='/#services'>
+                    <Navbar.Brand href='#services'>
                         <img alt="sports" src={Logo} height="30" className="d-inline-block align-top"/>
                     </Navbar.Brand>
                     <Navbar.Offcanvas id="offcanvasNavbar-expand" placement="end" style={{backgroundColor:'#008fc3',width:'30vh'}} >

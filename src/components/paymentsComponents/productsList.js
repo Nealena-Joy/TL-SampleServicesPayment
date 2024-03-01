@@ -32,16 +32,24 @@ export default class productsList extends React.Component {
         return(
             <div>
                 <div style={banner}>
-                    <Row style={{paddingTop:'20vh'}}>
-                        <Col md={{ span: 3, offset: 2 }}>
-                            <h1 style={{color:'whitesmoke'}}>Our Services</h1>
-                        </Col>
-                    </Row>
+                    <Container>
+                        <Row style={{paddingTop:'20vh'}}>
+                            <Col md={{ span: 3, offset: 2 }}>
+                                <h1 style={{color:'whitesmoke'}}>Our Services</h1>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
                 <div style={{backgroundColor: '#008fc3'}}>
                     <Container style={{textAlign:'center'}}>
-                        <a style={{fontSize:'larger',margin:'15px'}}><b>✆ 09170000000 (Globe)</b></a>
-                        <a style={{fontSize:'larger',margin:'15px'}}><b>✉ TennisLab@gmail.com</b></a>
+                        <Row className="justify-content-md-center">
+                            <Col md="auto">
+                                <a style={{fontSize:'larger',margin:'15px'}}><b>Mobile: 09170000000 (Globe)</b></a>
+                            </Col>
+                            <Col md="auto">
+                                <a style={{fontSize:'larger',margin:'15px'}}><b>Email: TennisLab@gmail.com</b></a>
+                            </Col>
+                        </Row>
                     </Container>
                 </div>
                 <div style={{height:'10vh',backgroundColor:'black'}}></div>
