@@ -1,6 +1,7 @@
 INFO
 * List of services with payment link
-* npm run deploy - for gh page
+* npm start
+* npm run deploy - for gh page publish after committing
 
 # Getting Started with Create React App
 

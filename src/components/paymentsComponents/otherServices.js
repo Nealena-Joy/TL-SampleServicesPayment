@@ -12,6 +12,7 @@ export default class otherServices extends React.Component {
 
         }
     }
+    
     render() {
         const accHeader = `OTHER SERVICES`;
         const accBody = `Ready to explore more? Dive into our diverse services!`;

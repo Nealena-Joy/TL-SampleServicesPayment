@@ -8,17 +8,14 @@ export default class NavbarTop extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
-            password: '',
-            loginError: '',
-            show: '0',
-            isLoggedIn: false
-        };
+            
+        }
     };
 
     render() {
+    
         return(
-            <Navbar expand="sm" fixed="top" style={{backgroundColor:'#008fc373'}}>
+            <Navbar expand="sm" fixed="top" className='navbar active' onScroll={this.changeNavbarBG}>
                 <Container>
                     <Navbar.Brand href='#services'>
                         <img alt="sports" src={Logo} height="30" className="d-inline-block align-top"/>

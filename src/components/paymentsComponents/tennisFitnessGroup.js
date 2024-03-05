@@ -12,6 +12,7 @@ export default class tennisFitnessGroup extends React.Component {
 
         }
     }
+    
     render() {
         const accHeader = `TENNIS FITNESS SESSIONS`;
         const accBody = `Here to help you train and perform at your best.`;

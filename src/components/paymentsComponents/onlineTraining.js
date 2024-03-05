@@ -12,6 +12,7 @@ export default class onlineTraining extends React.Component {
             
         }
     }
+    
     render() {
         const accHeader = `ONLINE TRAINING PROGRAM`;
         const accBody = `Embark on your fitness journey with our personalized online fitness consultation! Our expert trainers will assess your goals, lifestyle, and fitness level to tailor a customized plan just for you. From workout routines to nutrition advice, we'll provide the guidance and support you need to achieve your health and wellness goals.`;

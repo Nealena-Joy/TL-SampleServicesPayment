@@ -15,6 +15,7 @@ export default class productsList extends React.Component {
 
         }
     }
+    
     render() {
 
         return(
