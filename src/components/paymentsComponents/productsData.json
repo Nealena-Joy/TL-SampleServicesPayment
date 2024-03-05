@@ -3,12 +3,62 @@
         {
             "id": 0,
             "title": "Initial Online Consultation",
-            "description": "One off online on set up fee on the <a href='https://www.teambuildr.com/'>Team Builder</a> app + consultation + program design + exercise videos + on-going communication"
+            "hours": null,
+            "description": "One off online on set up fee on the Team Buildr app + 1 hour consultation + program design + exercise videos + on-going communication",
+            "cost": "Php 5,500",
+            "paymentLink": "https://pm.link/qtph-ti2UcyBVeN7fcud3zEGUTyTw/test/g4aEFSA"
         },
         {
             "id": 1,
-            "title": "Test Follow Up title",
-            "description": ""
+            "title": "Follow-Up Online Consultation",
+            "hours": null,         
+            "description": "Program update + exercise videos",
+            "cost": "Php 1,900 / hour",
+            "paymentLink": "https://pm.link/qtph-ti2UcyBVeN7fcud3zEGUTyTw/test/g4aEFSA"
+        },
+        {
+            "id": 2,
+            "title": "Package A",
+            "hours": null,         
+            "description": "Revitalize your fitness journey with our comprehensive package! Includes set up on the Team Buildr app, exercise videos, on-going communication and 3 hours of consultation with a coach.",
+            "cost": "Php 9,500",
+            "paymentLink": "https://pm.link/qtph-ti2UcyBVeN7fcud3zEGUTyTw/test/S7oDUdH"
+        }
+    ],
+    "TennisFitnessSessions": [
+        {
+            "id": 0,
+            "title": "Individual Tennis S&C Assessment Consultation",
+            "hours": "1 hour",         
+            "description": "Elevate your tennis game with our strength and conditioning program! Led by certified trainers, our tailored sessions enhance strength, agility, and endurance specific to tennis movements. Whether you're a competitive player or a recreational enthusiast, join us to unleash your full potential on the court!",
+            "cost": "Php 5,500",
+            "paymentLink": "https://pm.link/qtph-ti2UcyBVeN7fcud3zEGUTyTw/test/g4aEFSA"
+        },
+        {
+            "id": 1,
+            "title": "Tennis Fitness Group",
+            "hours": "1.5 hours",         
+            "description": "Get ready to ace your fitness goals with our dynamic tennis fitness group sessions! Designed to boost your endurance, agility, and strength while honing your tennis skills, these sessions offer a winning combination of cardio, strength training, and tennis-specific drills. Join us on the court and take your game – and fitness – to the next level!",
+            "cost": "Php 4,000 / head",
+            "paymentLink": "https://pm.link/qtph-ti2UcyBVeN7fcud3zEGUTyTw/test/mVwMS72"
+        }
+    ],
+    "OtherServices": [
+        {
+            "id": 0,
+            "title": "Individual Tennis S&C Assessment Consultation",
+            "hours": "1 hour",         
+            "description": "Elevate your tennis game with our strength and conditioning program! Led by certified trainers, our tailored sessions enhance strength, agility, and endurance specific to tennis movements. Whether you're a competitive player or a recreational enthusiast, join us to unleash your full potential on the court!",
+            "cost": "Php 5,500",
+            "paymentLink": "https://pm.link/qtph-ti2UcyBVeN7fcud3zEGUTyTw/test/g4aEFSA"
+        },
+        {
+            "id": 1,
+            "title": "Tennis Fitness Group",
+            "hours": "2 hours",         
+            "description": "Get ready to ace your fitness goals with our dynamic tennis fitness group sessions! Designed to boost your endurance, agility, and strength while honing your tennis skills, these sessions offer a winning combination of cardio, strength training, and tennis-specific drills. Join us on the court and take your game – and fitness – to the next level!",
+            "cost": "Php 4,000 / head",
+            "paymentLink": "https://pm.link/qtph-ti2UcyBVeN7fcud3zEGUTyTw/test/mVwMS72"
         }
     ]
 }

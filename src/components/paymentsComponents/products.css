@@ -1,0 +1,29 @@
+.banner {
+    background-image: url('../assets/SportsWallpaper.jpeg');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+
+
+.accordion {
+    background-color: none;
+}
+
+.accordionItemStyle {
+    margin-top: 5px;
+    border-radius: 0;
+
+}
+
+/* Cards for Services */
+.cardStyle {
+    margin: 2%;
+}
+.cardFooter {
+    background-color: transparent;
+    text-align: center;
+    margin: 5px;
+}
