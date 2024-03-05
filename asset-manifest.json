@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TL-SampleServicesPayment/static/css/main.99c5d6db.css",
-    "main.js": "/TL-SampleServicesPayment/static/js/main.edc3c531.js",
+    "main.js": "/TL-SampleServicesPayment/static/js/main.26af3ad2.js",
     "static/js/787.209b5b61.chunk.js": "/TL-SampleServicesPayment/static/js/787.209b5b61.chunk.js",
     "static/media/TennisLab-Logo.png": "/TL-SampleServicesPayment/static/media/TennisLab-Logo.a5ec436b547fddeeb628.png",
     "static/media/SportsWallpaper.jpeg": "/TL-SampleServicesPayment/static/media/SportsWallpaper.772c87c5c5a087d3fa33.jpeg",
@@ -9,11 +9,11 @@
     "static/media/call.svg": "/TL-SampleServicesPayment/static/media/call.de13f28cfb0ce70b2078ef4e1640e58a.svg",
     "static/media/email_1.svg": "/TL-SampleServicesPayment/static/media/email_1.b526de090bb7f193b979c7636e799e0e.svg",
     "main.99c5d6db.css.map": "/TL-SampleServicesPayment/static/css/main.99c5d6db.css.map",
-    "main.edc3c531.js.map": "/TL-SampleServicesPayment/static/js/main.edc3c531.js.map",
+    "main.26af3ad2.js.map": "/TL-SampleServicesPayment/static/js/main.26af3ad2.js.map",
     "787.209b5b61.chunk.js.map": "/TL-SampleServicesPayment/static/js/787.209b5b61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.99c5d6db.css",
-    "static/js/main.edc3c531.js"
+    "static/js/main.26af3ad2.js"
   ]
 }
